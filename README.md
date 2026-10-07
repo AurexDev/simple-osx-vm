@@ -23,7 +23,19 @@ First run setup.sh to fetch tools used and prepare the EFI partition:
 ```bash
 ./setup.sh
 ```
-Then execute recovery.sh to pull the macOS Recovery (All versions have not been tested, Ventura is recommended!)
+> [!TIP]
+> You can also use the debug build by running:
+> ```bash
+> ./setup.sh debug
+> ```
+> You can also bypass verification (altough this is not recommended):
+> ```bash
+> ./setup.sh release noverify
+> ```
+
+Then execute recovery.sh to pull the macOS Recovery
+> [!NOTE]
+> Not all macOS versions have been tested, **Ventura** is recommended.
 ```bash
 ./recovery.sh
 ```
@@ -31,9 +43,8 @@ Lastly launch qemu by running the run.sh script:
 ```bash
 ./run.sh
 ```
-
-## AI
-- LLMs were used in this project, and its scripts.
+## AI usage
+> LLMs were used to assist making scripts in this project.
 
 ## Tools used
 - OpenCore (https://github.com/acidanthera/OpenCorePkg.git)

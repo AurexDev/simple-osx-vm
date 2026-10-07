@@ -8,8 +8,16 @@ for t in "${TOOLS[@]}"; do command -v "$t" &>/dev/null || { echo "$t not found";
 BUILD_TYPE="${1:-release}"
 BUILD_TYPE=$(echo "$BUILD_TYPE" | tr '[:upper:]' '[:lower:]')
 
+VERIFY_MODE="${2:-verify}"
+VERIFY_MODE=$(echo "$VERIFY_MODE" | tr '[:upper:]' '[:lower:]')
+
 if [ "$BUILD_TYPE" != "release" ] && [ "$BUILD_TYPE" != "debug" ]; then
     echo "unknown build type '$BUILD_TYPE'. use 'release' or 'debug'."
+    exit 1
+fi
+
+if [ "$VERIFY_MODE" != "verify" ] && [ "$VERIFY_MODE" != "noverify" ]; then
+    echo "unknown verification mode '$VERIFY_MODE'. use 'verify' or 'noverify'."
     exit 1
 fi
 
@@ -70,14 +78,18 @@ fetch_oc() {
         echo "using cached opencorepkg ($suffix)"
     fi
 
-    echo "verifying opencore"
-    local local_sha
-    local_sha=$(sha256sum "$zip_path" | awk '{print $1}')
+	if [ "$VERIFY_MODE" = "verify" ]; then
+        echo "verifying opencore"
+        local local_sha
+        local_sha=$(sha256sum "$zip_path" | awk '{print $1}')
 
-    if [ "$exp_sha" != "$local_sha" ]; then
-        echo "opencore verification failed"
-        rm -f "$zip_path"
-        exit 1
+        if [ "$exp_sha" != "$local_sha" ]; then
+            echo "opencore verification failed"
+            rm -f "$zip_path"
+            exit 1
+        fi
+    else
+        echo "skipping opencore verification"
     fi
 
     rm -rf "$OC_DIR"
@@ -119,14 +131,18 @@ fetch_ovmf() {
         echo "using cached ovmf"
     fi
 
-    echo "verifying ovmf"
-    local local_sha
-    local_sha=$(sha256sum "$tar_path" | awk '{print $1}')
+	if [ "$VERIFY_MODE" = "verify" ]; then
+        echo "verifying ovmf"
+        local local_sha
+        local_sha=$(sha256sum "$tar_path" | awk '{print $1}')
 
-    if [ "$exp_sha" != "$local_sha" ]; then
-        echo "ovmf verification failed"
-        rm -f "$tar_path"
-        exit 1
+        if [ "$exp_sha" != "$local_sha" ]; then
+            echo "ovmf verification failed"
+            rm -f "$tar_path"
+            exit 1
+        fi
+    else
+        echo "skipping ovmf verification"
     fi
 
     rm -rf "$OVMF_DIR"
@@ -150,12 +166,24 @@ fetch_kext() {
     fi
 
     local url
-    url=$(echo "$json" | grep "browser_download_url" | grep "$suffix" | head -n 1 | cut -d'"' -f4)
+    url=$(echo "$json" | awk -v suf="$suffix" '
+        /"name":/ { gsub(/"/, "", $2); name = $2; sub(/,$/, "", name) }
+        /"browser_download_url":/ { 
+            url = $2; gsub(/"/, "", url); sub(/,$/, "", url)
+            if (name ~ suf) { print url; exit }
+        }
+    ')
 
     if [ -z "$url" ] && [ "$BUILD_TYPE" = "debug" ]; then
         echo "debug build for $repo_name not found, falling back to RELEASE"
         suffix="RELEASE.zip"
-        url=$(echo "$json" | grep "browser_download_url" | grep "$suffix" | head -n 1 | cut -d'"' -f4)
+        url=$(echo "$json" | awk -v suf="$suffix" '
+            /"name":/ { gsub(/"/, "", $2); name = $2; sub(/,$/, "", name) }
+            /"browser_download_url":/ { 
+                url = $2; gsub(/"/, "", url); sub(/,$/, "", url)
+                if (name ~ suf) { print url; exit }
+            }
+        ')
     fi
 
     if [ -z "$url" ]; then
