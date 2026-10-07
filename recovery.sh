@@ -81,7 +81,6 @@ select opt in "${names[@]}"; do
         fi
 
 		if [ -n "$current_cached_version" ] && [ "$current_cached_version" != "$name" ]; then
-            echo "Cached recovery is for '$current_cached_version', but you selected '$name'. Clearing old cache..."
             rm -rf "$RECOVERY_DIR"
         fi
 
