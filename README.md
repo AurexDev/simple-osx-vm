@@ -43,6 +43,18 @@ Lastly launch qemu by running the run.sh script:
 ```bash
 ./run.sh
 ```
+## GPU acceleration
+GPU acceleration have been made possible via reims-vgpu, but it's highly experimental, you need at least 12GB RAM allocated to the VM.
+First check if you have the following dependencies installed:
+```bash
+which cargo
+which ninja
+which llvm-as
+which spirv-as
+```
+Then build reims via the ./reims.sh script.
+You will be able to launch the VM with GPU acceleration via ./reims-run.sh
+
 ## AI usage
 > LLMs were used to assist making scripts in this project.
 

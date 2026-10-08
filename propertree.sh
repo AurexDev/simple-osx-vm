@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 TOOLS=(git python3)
 for t in "${TOOLS[@]}"; do command -v "$t" &>/dev/null || { echo "$t not found"; exit 1; }; done
@@ -10,9 +11,11 @@ echo "config.plist not found, did you run setup.sh"
 exit 1
 fi
 
-if [ ! -d propertree ]; then
-echo "propertree not found, cloning"
-git clone --depth 1 https://github.com/corpnewt/ProperTree.git propertree
+if [ -d propertree ]; then
+    git -C propertree pull --ff-only
+else
+    echo "propertree not found, cloning"
+    git clone --depth 1 https://github.com/corpnewt/ProperTree.git propertree
 fi
 
 python3 propertree/ProperTree.py "$PLIST"
