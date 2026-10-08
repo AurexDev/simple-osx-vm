@@ -86,6 +86,12 @@ You will be able to launch the VM with GPU acceleration using:
  ./reims-run.sh
 ```
 
+## Troubleshooting
+
+### Unable to install macOS (Recovery server could not be contacted)
+
+Try changing the "-device virtio-net-pci" line in run.sh to "-device e1000-nic,netdev=net0,id=net0,mac=52:54:00:c9:18:27"
+
 ## AI usage
 > LLMs were used to assist making scripts in this project.
 
