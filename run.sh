@@ -75,10 +75,13 @@ if [ "${REIMS:-0}" = "1" ]; then
 
 	GOP_ROM="${REIMS_VGPU_GOP_ROM:-reims/crates/reims-vgpu-efi/out/reims-vgpu-gop.rom}"
     [ -f "$GOP_ROM" ] || { echo "GOP ROM missing, run reims/crates/reims-vgpu-efi/scripts/reims-vgpu-efi-rom/reims-vgpu-efi-rom.sh"; exit 1; }
+
     export REIMS_VGPU_WINDOW=1
+    #export REIMS_VGPU_FULLSCREEN=on
+	export REIMS_VGPU_DMABUF=off
+
     QEMU_ARGS+=(
         -display none
-#		-display sdl,full-screen=on 
         -vga none
         -device pci-bridge,chassis_nr=5,id=pci.5,bus=pcie.0,addr=1e.0
         -device "reims-vgpu-pci,id=reimsvgpu,bus=pci.5,addr=00.0,romfile=$GOP_ROM,rombar=1"
