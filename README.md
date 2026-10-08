@@ -42,7 +42,7 @@ Then execute recovery.sh to pull the macOS Recovery
 
 Create a qcow2 disk for the installation:
 ```bash
-qemu-img create -f qcow2 osx-disk.qcow2 80G
+qemu-img create -f qcow2 osx_disk.qcow2 80G
 ```
 
 Lastly launch qemu by running the run.sh script:
