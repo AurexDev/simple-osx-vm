@@ -40,20 +40,45 @@ Then execute recovery.sh to pull the macOS Recovery
 ./recovery.sh
 ```
 Lastly launch qemu by running the run.sh script:
+> [!NOTE]
+> If the log looks, stuck do not panic!
+> This can happen because the log is outputted to the serial console.
 ```bash
 ./run.sh
 ```
 ## GPU acceleration
-GPU acceleration have been made possible via reims-vgpu, but it's highly experimental, you need at least 12GB RAM allocated to the VM.
-First check if you have the following dependencies installed:
+GPU acceleration have been made possible via reims-vgpu
+> [!CAUTION]
+> Reims is highly experimental, some issues include:
+> - Not being able to boot under 12GB RAM allocated,
+> - Content on screen turns black,
+> - Not being able to enter fullscreen
+> - Kernel panics
+
+First install the following dependencies:
+### Ubuntu/Debian
 ```bash
-which cargo
-which ninja
-which llvm-as
-which spirv-as
+sudo apt install git cargo ninja-build llvm spirv-tools python3 python3-venv python3-pip
 ```
-Then build reims via the ./reims.sh script.
-You will be able to launch the VM with GPU acceleration via ./reims-run.sh
+### Arch Linux
+```bash
+sudo pacman -S git cargo ninja llvm spirv-tools python
+```
+
+### Fedora
+```bash
+sudo dnf install git cargo ninja llvm spirv-tools python3 python3-pip
+```
+
+To start the build execute:
+```bash
+./reims.sh
+```
+
+You will be able to launch the VM with GPU acceleration using:
+```bash
+ ./reims-run.sh
+```
 
 ## AI usage
 > LLMs were used to assist making scripts in this project.
