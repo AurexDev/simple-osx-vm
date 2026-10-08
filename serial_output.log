@@ -1,1981 +1,0 @@
-reims-vgpu-window: first frame presented (1920x1080, 3 drawables)
-reims-vgpu-window: keyboard captured (wayland_shortcuts_inhibit) — the guest now receives Cmd/Alt/Super chords. Press Ctrl+Alt+Esc to release it.
-reims-vgpu efi-gop: start
-reims-vgpu efi-gop: GOP installed BAR1=0x80000000 1920x1080 BGRA8
-[2J[001;001H[=3h[2J[001;001H[2J[001;001H[8;056;240t[2J[001;001HBdsDxe: loading Boot0003 "UEFI QEMU HARDDISK QM00001 " from PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x0,0xFFFF,0x0)
-BdsDxe: starting Boot0003 "UEFI QEMU HARDDISK QM00001 " from PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x0,0xFFFF,0x0)
-#[EB|LOG:EXITBS:END] _
-#[EB.BST.FBS|-]
-#[EB|B:BOOT]
-#[EB|LOG:HANDOFF TO XNU] _
-======== End of efiboot serial output. ========
-kprintf initialized
-Serial mode specified: 00000003
-version_variant = 0
-version         = Darwin Kernel Version 22.6.0: Tue Jul 15 08:22:28 PDT 2025; root:xnu-8796.141.3.713.2~2/RELEASE_X86_64
-KASLR slide: 0x000000000d000000 dynamic
-Hiding local relocations
-WARNING: ignoring first page in [0x0:0x86]
-Physical memory 12288 MB
-avail_remaining = 0x2ff425
-PMAP: PCID enabled
-PMAP: Supervisor Mode Execute Protection enabled
-PMAP: Supervisor Mode Access Protection enabled
-Kernel virtual space from 0xffffff8000000000 to 0xffffffffffffefff.
-Available physical space from 0x11e14000 to 0x37ffff000
-initialize_screen: b=80000000, w=00000780, h=00000438, r=00001E00, d=00000001
-Darwin Kernel Version 22.6.0: Tue Jul 15 08:22:28 PDT 2025; root:xnu-8796.141.3.713.2~2/RELEASE_X86_64
-pmap_startup() delaying init/free of page nums > 0x200000
-pmap_startup() init/release time: 55259 microsec
-pmap_startup() delayed init/release of 1597107 pages
-vm_page_bootstrap: 1482267 free pages, 1647077 wired pages, (up to 1597107 of which are delayed free)
-VM boostrap: 73 maps, 153 entries and 128 holes available
-Maximum number of VM swap files: 100
-kext submap [0x<ptr> - 0x<ptr>], kernel text [0x<ptr> - 0x<ptr>]
-"vm_compressor_mode" is 4
-VM bootstrap done: 57 maps, 110 entries and 117 holes left
-IOKit IOMD setownership ENABLED
-ATM subsystem is initialized
-OSLog stream configured: stream: 8192 bytes, cache: 2112 bytes
-Firehose configured: 16 chunks, 8 io pages
-Log queues configured: slot count: 32, per-slot size: 32768, total size: 1048576
-Long logs support configured: size: 16384
-Telemetry: Sampling all tasks once per 1 second
-Scheduler: Default of dualq
-Setting scheduler priority decay band limit 18
-standard timeslicing quantum is 10000 us
-standard background quantum is 2500 us
-mig_table_max_displ = 54 mach_kobj_count = 374
-IPC_PTHREAD_PRIORITY subsystem is initialized
-BANK subsystem is initialized
-Reallocated master cpu data: 0xffffff800e0b6940, interrupt stack: 0xffffffae3331a000, fault stack: 0xffffff800d10c800
-CPU identification: Intel Core Processor (Skylake)
-CPU features: FPU VME DE PSE TSC MSR PAE MCE CX8 APIC SEP MTRR PGE MCA CMOV PAT PSE36 CLFSH MMX FXSR SSE SSE2 HTT SSE3 PCLMULQDQ SSSE3 FMA CX16 SSE4.1 SSE4.2 x2APIC MOVBE POPCNT AES VMM PCID XSAVE TSCTMR AVX1.0 RDRAND F16C RDWRFSGS BMI1 AVX2 SMEP BMI2 ERMS INVPCID RDSEED ADX SMAP
-  HTT: 4 cores per package; 4 logical cpus per package
-CPU extended features: SYSCALL XD EM64T LAHF LZCNT PREFETCHW RDTSCP TSCI
-Initializing EFI runtime services
-MSR_IA32_APIC_BASE 0xfee00000 enabled legacy mode BSP
-x2APIC supported and will be enabled
-x2APIC mode enabled
-ID: 0x0 LDR: 0x1
-Boot cpu local APIC id 0x0
-TSC sync margin disabled
-fpu_state: AVX, state_size: 832
-Kernel text 0xffffff800d2dc000-0xffffff800dcdc000 to be write-protected
-Marking (0xffffff800d210000, 0xffffff800d2db000) as rwx
-Marking (0xffffff800e328000, 0xffffff800e364000) as rwx
-Marking (0xffffff800e364000, 0xffffff800e365000) as rwx
-Marking (0xffffff800dcdc000, 0xffffff800dcee000) as rwx
-Marking (0xffffff800d2db000, 0xffffff800d2dc000) as rwx
-Marking (0xffffff800e365000, 0xffffff800e365000) as rwx
-Marking (0xffffff800dcee000, 0xffffff800dcee000) as rwx
-Marking (0xffffff80114b0000, 0xffffff80117cb000) as rwx
-Marking (0xffffff80107a8000, 0xffffff80107f1000) as rwx
-Marking (0xffffff800d210000, 0xffffff800d210000) as rwx
-Marking (0xffffff8010838000, 0xffffff80112eb000) as rwx
-[RTCLOCK] frequency 2690000000 (2688000000)
-TSC Deadline Timer supported and enabled
-kdp_core zlib memory 0x7000
-Registered coredump handler for kernel
-Kernel boot args: '-v debug=0x108 keepsyms=1 serial=3'
-corecrypto_kext_start (tracing disabled)
-FIPSPOST_KEXT [415218281] fipspost_post:152: [FIPSPOST][Module-ID] Apple corecrypto Module v13.0 [Intel, Kernel, Software, SL1]
-FIPSPOST_KEXT [416059544] fipspost_post:160: PASSED: (0 ms) - fipspost_post_hmac
-FIPSPOST_KEXT [417457788] fipspost_post:164: PASSED: (0 ms) - fipspost_post_integrity
-FIPSPOST_KEXT [418037979] fipspost_post:168: PASSED: (0 ms) - fipspost_post_indicator
-FIPSPOST_KEXT [418597003] fipspost_post:169: PASSED: (0 ms) - fipspost_post_aes_ecb
-FIPSPOST_KEXT [419123344] fipspost_post:170: PASSED: (0 ms) - fipspost_post_aes_cbc
-FIPSPOST_KEXT [421450501] fipspost_post:171: PASSED: (1 ms) - fipspost_post_rsa_sig
-FIPSPOST_KEXT [426571220] fipspost_post:172: PASSED: (4 ms) - fipspost_post_ecdsa
-FIPSPOST_KEXT [427238888] fipspost_post:173: PASSED: (0 ms) - fipspost_post_ecdh
-FIPSPOST_KEXT [427763341] fipspost_post:174: PASSED: (0 ms) - fipspost_post_aes_ccm
-FIPSPOST_KEXT [428304747] fipspost_post:175: PASSED: (0 ms) - fipspost_post_aes_cmac
-FIPSPOST_KEXT [428857558] fipspost_post:176: PASSED: (0 ms) - fipspost_post_hkdf
-FIPSPOST_KEXT [433612953] fipspost_post:177: PASSED: (4 ms) - fipspost_post_pbkdf
-FIPSPOST_KEXT [434167171] fipspost_post:178: PASSED: (0 ms) - fipspost_post_drbg_hmac
-FIPSPOST_KEXT [434724343] fipspost_post:180: PASSED: (0 ms) - fipspost_post_kdf_ctr
-FIPSPOST_KEXT [435264401] fipspost_post:181: PASSED: (0 ms) - fipspost_post_aes_gcm
-FIPSPOST_KEXT [435812548] fipspost_post:182: PASSED: (0 ms) - fipspost_post_aes_xts
-FIPSPOST_KEXT [436367568] fipspost_post:183: PASSED: (0 ms) - fipspost_post_tdes_ecb
-FIPSPOST_KEXT [436917998] fipspost_post:184: PASSED: (0 ms) - fipspost_post_drbg_ctr
-FIPSPOST_KEXT [437470116] fipspost_post:206: all tests PASSED (22 ms)
-corecrypto_kext_start completed sucessfully
-Matching service count = 0
-Matching service count = 0
-ulock_initialize>thread_max=15360, ull_hash_buckets=4096
-ACPI: ACPI: RSDP 0x000000007FEB7014 000024 (v02 BOCHS )RSDP 0x000000007FEB7014 000024 (v02 BOCHS )
-
-ACPI: ACPI: XSDT 0x000000007FF1D000 000054 (v01 BOCHS  BXPC     00000001      01000013)XSDT 0x000000007FF1D000 000054 (v01 BOCHS  BXPC     00000001      01000013)
-
-ACPI: ACPI: FACP 0x000000007FEB1000 0000F4 (v03 BOCHS  BXPC     00000001 BXPC 00000001)FACP 0x000000007FEB1000 0000F4 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: DSDT 0x000000007FEB2000 003014 (v01 BOCHS  BXPC     00000001 BXPC 00000001)DSDT 0x000000007FEB2000 003014 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: FACS 0x000000007FF16000 000040FACS 0x000000007FF16000 000040
-
-ACPI: ACPI: APIC 0x000000007FEB0000 000090 (v03 BOCHS  BXPC     00000001 BXPC 00000001)APIC 0x000000007FEB0000 000090 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: HPET 0x000000007FEAF000 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)HPET 0x000000007FEAF000 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: MCFG 0x000000007FEAE000 00003C (v01 BOCHS  BXPC     00000001 BXPC 00000001)MCFG 0x000000007FEAE000 00003C (v01 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: WAET 0x000000007FEAD000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)WAET 0x000000007FEAD000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
-
-ACPI: ACPI: SSDT 0x000000007FF1E000 001CAD (v02 DRTNIA SsdtEC   00001000 INTL 20210105)Darwin Image4 Validator Version 5.0.0: Tue Jul 15 08:14:25 PDT 2025; root:AppleImage4-202.120.2~1073/AppleImage4/RELEASE_X86_64
-calling mpo_policy_init for AppleImage4
-Security policy loaded: AppleImage4 sysctl hook (AppleImage4)
-AppleImage4: no options node: 19
-calling mpo_policy_init for AMFI
-Security policy loaded: Apple Mobile File Integrity (AMFI)
-AMFI: Booted in a VM
-calling mpo_policy_init for Sandbox
-Security policy loaded: Seatbelt sandbox policy (Sandbox)
-calling mpo_policy_init for Quarantine
-Security policy loaded: Quarantine policy (Quarantine)
-AppleCredentialManager: init: inited KE[1] (ready=NO, AVP=NO) -> true.
-AppleCredentialManager: probe: probed KE[1] (ready=NO) -> true (score=0).
-AppleCyrus::probe(IOResources)
-Couldn't alloc class "AppleKeyStoreTest"
-AppleCredentialM
-ACPI: 2 ACPI AML tables successfully acquired and loaded
-pci (build 08:15:00 Jul 15 2025), flags 0xc3080
-cpu_data_alloc(1) 0xffffff800e0b7b40 desc_table: 0xffffff800d12c320 ldt: 0xffffffb8a0109000 int_stack: 0xffffffae332ee000-0xffffffae332f2000
-cpu_data_alloc(2) 0xffffff800e0b8d40 desc_table: 0xffffff800d12c640 ldt: 0xffffffb8a0119000 int_stack: 0xffffffae33306000-0xffffffae3330a000
-cpu_data_alloc(3) 0xffffff800e0b9f40 desc_table: 0xffffff800d12c960 ldt: 0xffffffb8a0129000 int_stack: 0xffffffae33326000-0xffffffae3332a000
-anager: start: starting KE[1] (ready=NO) -> true.
-SSDT 0x000000007FF1E000 001CAD (v02 DRTNIA SsdtEC   00001000 INTL 20210105)
-ACPI: 2 ACPI AML tables successfully acquired and loaded
-pci (build 08:15:00 Jul 15 2025), flags 0xc3080
-AppleACPICPU: ProcessorId=0 LocalApicId=0 Enabled
-AppleACPICPU: ProcessorId=1 LocalApicId=1 Enabled
-AppleACPICPU: ProcessorId=2 LocalApicId=2 Enabled
-AppleACPICPU: ProcessorId=3 LocalApicId=3 Enabled
-no external trust caches found (segment length is zero)
-AppleCredentialManager: initImpl: called, KE[1].
-AssertMacros: value (value: 0x0), ---, file: /AppleInternal/Library/BuildRoots/cba74612-6165-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMKernelService.cpp:182
-AppleCredentialManager: initImpl: EOSDevice: 0 [SEP over: KernelRelay=NO SEPManager=NO] [booted into: BaseSystem=NO InternalSystem=NO].
-ACM: Env_SetVariableWithParams: set var[6] len=1 <00>.
-ACM: InitCredentialEngine: Global credential set created, CS[20].
-ACM: Env_SetVariableWithParams: set var[5] len=1 <00>.
-ACM: Env_SetVariableWithParams: set var[23] len=1 <01>.
-ACM: Env_SetVariableWithParams: set var[24] len=22 <4a756c20313520323032352c2030383a32353a353700>.
-ACM: Env_SetDataProvider: data provider *set* for var[25].
-ACM: Env_SetDataProvider: data provider *set* for var[27].
-ACM: Env_SetDataProvider: data provider *set* for var[36].
-ACM: Env_SetDataProvider: data provider *set* for var[22].
-ACM: Env_SetDataProvider: data provider *set* for var[29].
-ACM: Env_SetVariableWithParams: set var[7] len=1 <00>.
-ACM: Env_SetVariableWithParams: set var[26] len=1 <00>.
-ACM: Env_SetVariableWithParams: set var[33] len=1 <01>.
-ACM: Env_SetVariableWithParams: set var[34] len=1 <00>.
-ACMFirstResponderKernelService: init: called, .
-ACMTRM-S: init: called, starting PersistentStore service.
-ACMTRM-A: init: called, starting TRM Analytics service.
-ACMTRM-C: init: called, starting AccessoryCache service.
-ACMKernelService: initValueFromBootArgAliasesUInt32: acc-cache size = 48 (default).
-ACMKernelService: initValueFromBootArgAliasesUInt32: acc-cache expiration = 2592000 (default).
-ACM: TRMAccCache_SetupEmpty: called, cacheSize=48 expiration=2592000.
-ACMTRM: init: called, starting TRM service.
-ACMKernelService: initValueFromBootArgAliasesUInt32: policy supported in BaseSystem = 0 (default).
-ACMKernelService: initValueFromBootArgAliasesUInt32: config profile = 4294967295 (default).
-AssertMacros: dtDefaults (value: 0x0), ---, file: /AppleInternal/Library/BuildRoots/cba74612-6165-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMRestrictedModeKernelService.cpp:2070
-ACMTRM: _getDefaultConfigProfile: config profile: 2 (boot-arg=2 edt-prop=2).
-ACMKernelService: initValueFromBootArgAliasesUInt32: policy mode timeout = 604800 (default).
-ACMKernelService: initValueFromBootArgAliasesUInt32: grace period (bounded) timeout = 259200 (default).
-ACMKernelService: initValueFromBootArgAliasesUInt32: unlocked period timeout = 86400 (defaultx2APIC mode enabled
-)St.arte
-d cApuC 1M (Klaepirc nide 0l00S00e00r1)v
-ice: ix2APIC mode enabled
-SntairttedV capul 2u (elaFpirc oidm 0B00o00o00t2)A
-rgAliasesx2APIC mode enabled
-USIntta3rt2e:d e ncpaubl e3d  (blya pdiecf aiudl t0 0=0 010 0(0d3)e
-fault).
-ACMTRM: _disableBy: [TARCPMI:  EExNecAutBedL 1E bDlo=ckYs EofS m]od ul(e-mleavesl kex=ec0ut,ab leD AIMLS cAodBeL
-ED BY: Def=NO* BtArg=NO HW=NO DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-IOAPIC: Version 0x11 Vectors 64:87
-ACPI: Executed 1 blocks of module-level executable AML code
-ACPI: sleep states S3 S4 S5
-ACMTRM: _disableBy: [TRM ENABLED=YES] (mask=0, DISABLED BY: Def=NO BtArg=NO* HW=NO DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES* DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO* OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-AssertMacros: data (kvPaElDuies:a b0lxe0S)c,r e'eenx t-e1r
-nal-boot' property not found, file: /AppleInternal/Liwatcbrhadroy/gB udilidsRaoboltesd/ cbbya 7p4l6a1t2f-o6r1m6 5c-o1n1ffiguration0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMRestrictedMode[addMemoryRange()] AppleVTD is not yet installed as gSyMsattechemd
- [aagddaMinesmt SMC (started)
-No Generation from SMC.
-oryRange()] AppleVTD is not yet installed as gSystem
-[addMemoryRange()] AppleVTD is not yet installed as gSystem
-[addMemoryRange()] AppleVTD is not yet installeidn iatsi gaSylsitzeem
-_[s crPCeIe nc: onb=f8i0gu00r0at0i00o, wn= 0b00eg00in7 8]0, 
-hI=OP0C0IC0on0fi0g43u8r,at orr=0:0:0c0o1nfEi0g0u,r ed =0k00I00O00P1C
-IEnumerationWaitTime is kP90E0E
-nParbleeSvciroeuesn  s-h1u
-tdown cause: 0
-VirtualSMC     efend: @ authenticated restart support is unavailable (800000000000000E, 8)
-VirtualSMC      vsmc: @ disabling itself due to multiple devices present
-console relocated to 0x80000000
-[ PCI configuration end, bridges 2, devices 12 ]
-HID: Legacy shiPMm 2R
-D: ASClMeTeRpM :f a_illuoraed Dciosdaeb l0exdfBfyfEfxftfefrfn a0lxBfofoftf:f fdfifs
-abled by ExternalBoot: NO.
-Sleep failure code 0xffffffff 0xffffffff
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO B[tAArHg=CNOI ]HW=[YEPSML][00000000]+IOAHCIPortMultip lDievTe=NOr OGSElnobv=aNOl EsxB:t:=NIO*O |A MHgCCo=INOP DowOrS=tNOM CuhBld=tNOi GpSwl=NiO eCPrroG=NlO oBSbyas=lNOs M
-Bud=NO [SAmCHrdC=NIO ]Ap[SPetM=NLO)].[
-0A0ss0er0tM0ac0ro0s: 0da]t-a I(vOalAuHe:C 0Ix0P),o 'rdtisMabulel-ttrianpsplorit-ermr' Gprlopoerbtay lnost :fo:unIdO, AfiHleC: I/ApPploeInrtetrnMalu/Llibtrairyp/lBuiiledRroGotsl/cobab74a61l2-s61
-65-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMRestric[AHCI][HBA][00000000] start::266:AppleAHCI::start
-[AHCI][HBA][00000000] start::266:AppleAHCI::start
-ACMTRM: _loadDisabledByOSEnvironment: disabled by OSEnvironment: NO.
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO* ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM: _mapAndPublishTRM: set TRM_PolicyTimeout = 604800.
-ACMTRM: _mapAndPublishTRM: set TRM_PolicyReason = Unrestricted(0).
-ACMTRM: _mapAndPublishTRM: set TRM_UnlockedPeriodTimeout = 86400.
-ACMTRM: _mapAndPublishTRM: sending kIOMessageServicePropertyChange(#changes=3) while LOCKED(1), TRM: 604800/U(0) 4294967295/-(255) M=255/4294967295/4294967295 ---(255)/---(255) L=255 BS=255 R=255 UP=86400/255, CUR: U(0) -(255).
-AppleCredentialManager: initImpl: KE[1] INITED.
-AppleCredentialManager: initImpl: returning, KE[1] -> true.
-AppleCredentialManager: startImpl: called, KE[1].
-ACMTRM: start: security.mac.acm.root_pivot_occurred sysctl registered.
-[AHCI][PRT][00020000] InitializePort::689:Port 0
-LINKA:p p[lGeSCIrAe]d ennot iianltMearnraugpetr
-: sLtIaNrKt:I m[pGlS:I Ar]e geinsatbelrei nfga inloetdi
-fications.
-[AHCI][PRT][00020000] EnablePortOperation::3281:Enabling port 0
-[AHCI][PRT][00020000] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][001F0200] InitializePort::689:Port 0
-[AHCI][PRT][001F0200] EnablePortOperation::3281:Enabling port 0
-[AHCI][PRT][001F0200] EnablePortOperation::3330:Port 0 - link present
-[AHCI][PRT][001F0200] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][001F0200] WaitSecsForNotBusy::3905:Port 0 PxTFD: 0x130
-[AHCI][PRT][001F0200] EnablePortOperation::3507:Successfully enabled port 0
-[AHCI][001F0200] start::226:provider: <ptr>
-[AHCI][001F0200] start::291:Successfully initialized AHCI device
-[AHCI][PRT][001F0210] InitializePort::689:Port 1
-[AHCI][DISK][001F0200] start::407:
-[AHCI][PRT][001F0210] EnablePortOperation::3281:Enabling port 1
-[AHCI][PRT][001F0210] EnablePortOperation::3330:Port 1 - link present
-[AHCI][PRT][001F0210] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][001F0210] WaitSecsForNotBusy::3905:Port 1 PxTFD: 0x130
-[AHCI][PRT][001F0210] EnablePortOperation::3507:Successfully enabled port 1
-[AHCI][001F0210] start::226:provider: <ptr>
-[AHCI][001F0210] start::291:Successfully initialized AHCI device
-[AHCI][DISK][001F0210] start::407:
-[AHCI][PRT][001F0220] InitializePort::689:Port 2
-[AHCI][PRT][001F0220] EnablePortOperation::3281:Enabling port 2
-[AHCI][PRT][001F0220] setPowerState::2937:inNewPowerState: 2
-SATA WARNING: IDENTIFY DEVICE checksum not implemented
-SATA WARNING: IDENTIFY DEVICE checksum not implemented
-[AHCI][DISK][001F0200] start::518:Successfully initialized AHCI drive
-[AHCI][DISK][001F0200] setPowerState::2186:inNewPowerState = 3
-[AHCI][DISK][001F0200] setPowerState::2202:Already changed state to new power state, done
-[AHCI][DISK][001F0210] start::518:Successfully initialized AHCI drive
-[AHCI][DISK][001F0210] setPowerState::2186:inNewPowerState = 3
-[AHCI][DISK][001F0210] setPowerState::2202:Already changed state to new power state, done
-apfs_module_start:3058: load: com.apple.filesystems.apfs, v2142.140.9, apfs-2142.140.9.703.1, 2025/07/15
-ktriage_register_subsystem_strings: set subsystem 7 strings
-AppleCredentialManager: startImpl: KE[1] STARTED.
-AppleCredentialManager: startImpl: returning, KE[1] -> true.
-AppleCredentialManager: start: started KE[1] (ready=YES) -> true.
-AppleCyrus::start(IOResources) <1>
-IOGetBootKeyStoreData: data at address 0 size 0
-AppleKeyStore:330:0: starting (BUILT: Jul 15 2025 08:29:29) (normal variant)
-AppleKeyStore:488:0: _kernel_relay_enable = 0
-AppleKeyStore:533:0: _sep_enabled = 0
-AppleSSE::start called
-AssertMacros: value (value: 0x0),  file: /AppleInternal/Library/BuildRoots/cba74612-6165-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleSSE/AppleSSE/AppleSSE.cpp, line: 49
-AppleSSE::start returning, result = 1
-virtual bool CoreAnalyticsHub::start(IOService *)::139:CoreAnalyticsHub start
-Registered CoreAnalyticsHub functions with xnu.virtual bool CoreAnalyticsHub::start(IOService *)::218:CoreAnalyticsHub start completed
-DSMOS has arrived
-Couldn't alloc class "AppleKeyStoreTest"
-Marking const DATA read-only
-Copyright (c) 1982, 1986, 1989, 1991, 1993
-	The Regents of the University of California. All rights reserved.
-
-MAC Framework successfully initialized
-AMFI: developer mode is force enabled on this platform
-AppleKeyStore:869:0: oy vey
-AMFIInitializeLocalSigningPublicKey: failed to get local signing public key (e00002bc)
-AMFI: finished: 1 1
-using 16384 buffer headers and 10240 cluster IO buffer headers
- found RTC service
-RTC: getGMTTimeOfDay 1791468481
-ktriage_register_subsystem_strings: set subsystem 8 strings
-Couldn't alloc class "AppleKeyStoreTest"
-mcache: 4 CPU(s), 64 bytes CPU cache line size
-mbinit: done [128 MB total pool size, (85/42) split]
-SK: netagent is enabled by default for this platform
-dlil_init: Waiting for all the create dlil kernel threads to get scheduled at least once.
-dlil_init: All the created dlil kernel threads have been scheduled at least once. Proceeding.
-bsd_autoconf: calling kminit
-com.apple.AppleFSCompressionTypeDataless kmod start
-ifnet_attach: All kernel threads created for interface lo0 have been scheduled at least once. Proceeding.
-com.apple.AppleFSCompressionTypeZlib kmod start
-ifnet_attach: Waiting for all kernel threads created for interface gif0 to get scheduled at least once.
-ifnet_attach: All kernel threads created for interface gif0 have been scheduled at least once. Proceeding.
-Couldn't alloc class "AppleKeyStoreTest"
-com.apple.AppleFSCompressionTypeIDOaStuarlfeassc elRooaodt :su:cicnesetdaeldlM
-ecommo.raypRpelgei.oAnpsp(l)e
-FSCoImOpSruersfsaicoen TaylpleoZwliinb gl ogaldo sbuaclc eleodoekdup
-sS e(twtiitnhg  wuapr nniontigfsi)e
-r for CoreAnalyticsHub
-calling mpo_policy_init for ASP
-calling mpo_policy_initbsd for ASP
-ASP: NVRAM pointer initialized
-ASP: No recovery key set
-Security policy loaded: Apple System Policy (ASP)
-apfs_sysctl_register:1562: done registering sysctls.
-Couldn't alloc class "AppleKeyStoreTest"
-IOKernelDebugger: registering debugger
-Couldn't alloc class "AppleKeyStoreTest"
-ifnet_attach: Waiting for all kernel threads created for interface XHC1 to get scheduled at least once.
-skip attaching fsw to lo0 using legacy TX modelifnet_attach: All kernel threads created for interface XHC1 have been scheduled at least once. Proceeding.
-ifnet_attach: Waiting for all kernel threads created for interface EHC253 to get scheduled at least once.
-ifnet_attach: All kernel threads created for interface EHC253 have been scheduled at least once. Proceeding.
-ifnet_attach: All kernel threads created for interface stf0 have been scheduled at least once. Proceeding.
-rooting via boot-uuid from /chosen: 5EA6026E-A8F8-49FB-99C4-AED728419EB5
-Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">IOResources</string><key>IOResourceMatch</key><string ID="2">boot-uuid-media</string></dict>
-Couldn't alloc class "AppleKeyStoreTest"
-AppleFileSystemDriver: using apfs-preboot-uuid
-ApplePS2Controller: Notification consumer published: ApplePS2Controller
-ApplePS2Controller: Notification consumer published: ApplePS2Keyboard
-VoodooPS2Trackpad: Identify TouchPad command returned incorrect byte 2 (of 3): 0x00
-IOHIDInterface(0x100000255): matching deferred by IOHIDEventDriver
-ApplePS2Controller: Timed out on input stream 1.
-[AHCI][PRT][00020000] WaitForLinkPresent::4023:Port 0 PxSSTS: 0x0
-[AHCI][PRT][00020000] EnablePortOperation::3315:Port 0 - HandleComReset
-[AHCI][PRT][001F0220] WaitForLinkPresent::4023:Port 2 PxSSTS: 0x0
-[AHCI][PRT][001F0220] EnablePortOperation::3315:Port 2 - HandleComReset
-ApplePS2Controller: Timed out on input stream 1.
-ApplePS2Controller: Timed out on input stream 1.
-ApplePS2ALPSGlidePoint: identify: not an ALPS device. Error getting E7/EC report
-IOHIPointing::0x100000259 has no HIDScrollResolution. This /implies/ no scroll acceleration.
-[AHCI][PRT][001F0220] WaitForLinkPresent::4023:Port 2 PxSSTS: 0x0
-[AHCI][PRT][001F0220] HandleComReset::3832:linkPresent 0 - Port 2
-[AHCI][PRT][00020000] WaitForLinkPresent::4023:Port 0 PxSSTS: 0x0
-[AHCI][PRT][00020000] HandleComReset::3832:linkPresent 0 - Port 0
-[AHCI][PRT][00020000] EnablePortOperation::3322:Port 0 - COMRESET did not proceed
-[AHCI][PRT][00020000] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][00020010] InitializePort::689:Port 1
-[AHCI][PRT][00020010] EnablePortOperation::3281:Enabling port 1
-[AHCI][PRT][00020010] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][001F0220] EnablePortOperation::3322:Port 2 - COMRESET did not proceed
-[AHCI][PRT][001F0220] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][001F0230] InitializePort::689:Port 3
-[AHCI][PRT][001F0230] EnablePortOperation::3281:Enabling port 3
-[AHCI][PRT][001F0230] setPowerState::2937:inNewPowerState: 2
-AppleUSBEHCIPort@fd100000: AppleUSBHostPort::enumerateDeviceComplete_block_invoke: enumerated 0x0627/0001/0000 (QEMU USB Tablet / 1) at 480 Mbps
-QEMU USB Tablet@fd100000: IOUSBHostDevice::setConfigurationGated: AppleUSBHostCompositeDevice selected configuration 1
-[AHCI][PRT][00020010] WaitForLinkPresent::4023:Port 1 PxSSTS: 0x0
-[AHCI][PRT][00020010] EnablePortOperation::3315:Port 1 - HandleComReset
-[AHCI][PRT][001F0230] WaitForLinkPresent::4023:Port 3 PxSSTS: 0x0
-[AHCI][PRT][001F0230] EnablePortOperation::3315:Port 3 - HandleComReset
-[AHCI][PRT][00020010] WaitForLinkPresent::4023:Port 1 PxSSTS: 0x0
-[AHCI][PRT][00020010] HandleComReset::3832:linkPresent 0 - Port 1
-[AHCI][PRT][00020010] EnablePortOperation::3322:Port 1 - COMRESET did not proceed
-[AHCI][PRT][00020010] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][00020020] InitializePort::689:Port 2
-[AHCI][PRT][001F0230] WaitForLinkPresent::4023:Port 3 PxSSTS: 0x0
-[AHCI][PRT][001F0230] HandleComReset::3832:linkPresent 0 - Port 3
-[AHCI][PRT][001F0230] EnablePortOperation::3322:Port 3 - COMRESET did not proceed
-[AHCI][PRT][001F0230] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][001F0240] InitializePort::689:Port 4
-[AHCI][PRT][001F0240] EnablePortOperation::3281:Enabling port 4
-[AHCI][PRT][001F0240] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][00020020] EnablePortOperation::3281:Enabling port 2
-[AHCI][PRT][00020020] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][00020020] EnablePortOperation::3330:Port 2 - link present
-[AHCI][PRT][00020020] WaitSecsForNotBusy::3905:Port 2 PxTFD: 0x130
-[AHCI][PRT][00020020] EnablePortOperation::3507:Successfully enabled port 2
-[AHCI][00020020] start::226:provider: <ptr>
-[AHCI][00020020] start::291:Successfully initialized AHCI device
-[AHCI][DISK][00020020] start::407:
-[AHCI][PRT][00020030] InitializePort::689:Port 3
-[AHCI][PRT][00020030] EnablePortOperation::3281:Enabling port 3
-[AHCI][PRT][00020030] setPowerState::2937:inNewPowerState: 2
-SATA WARNING: IDENTIFY DEVICE checksum not implemented
-[AHCI][DISK][00020020] start::518:Successfully initialized AHCI drive
-[AHCI][DISK][00020020] setPowerState::2186:inNewPowerState = 3
-[AHCI][DISK][00020020] setPowerState::2202:Already changed state to new power state, done
-cryptoAlloc:650: Using 64 buffers with size 16384, 512 buffers size 65536
-swcrypto_threadpool_init:1504: Starting ThreadPool
-swcrypto_threadpool_init:1526: 4 threads would be used for the ThreadPool
-specread_work_queue_init:162: number of threads used for specread work queue 3
-dev_init:296: disk2s2 device accelerated crypto: 0 (compiled @ Jul 15 2025 08:10:43)
-dev_init:299: disk2s2 device_handle block size 4096 block count 31406070 features 0 internal 
-fletcher64_init:87: Selecting AVX2 implementation of fletcher64
-nx_mount:1224: disk2s2 initializing cache w/hash_size 8192 and cache size 32768
-nx_mount:1553: disk2s2 checkpoint search: largest xid 2798, best xid 2798 @ 275
-nx_mount:1580: disk2s2 stable checkpoint indices: desc 274 data 25993
-nx_get_volume_group:8053: disk2s2 volume groups tree is not setup yet
-getVolumeGroupMountFrom:8529: disk2s2 nx_get_volume_group(5EA6026E-A8F8-49FB-99C4-AED728419EB5) failed with error 2
-nx_get_volume_group:8053: disk2s2 volume groups tree is not setup yet
-getVolumeGroupMountFrom:8529: disk2s2 nx_get_volume_group(5EA6026E-A8F8-49FB-99C4-AED728419EB5) failed with error 2
-probe:3995: disk2s2 Caching extended container info for container disk2s2
-authenticate_efi_forwarded_roothash:3253: evaluating authenticity of root hash
-IOGetARVRootHashData: data at address 293412864 size 229
-IOGetARVRootHashData: memory descriptor 0xffffff949ad6a690
-populate_value_from_memory_descriptor:12059:  populate_value_from_memory_descriptor boot_args arv blob size 229
-populate_value_from_memory_descriptor:12066: populate_value_from_memory_descriptor copied into arv blob size 229
-IOGetARVManifestData: data at address 293416960 size 3658
-IOGetARVManifestData: memory descriptor 0xffffff949ad68590
-populate_value_from_memory_descriptor:12059:  populate_value_from_memory_descriptor boot_args arv blob size 3658
-populate_value_from_memory_descriptor:12066: populate_value_from_memory_descriptor copied into arv blob size 3658
-root_hash_execution_cb:2828: img4_firmware_execute: successfully validated the payload and the manifest
-AppleFileSystemDriver: publishing boot-uuid-media=disk3s4 (Macintosh HD)
-Couldn't alloc class "AppleKeyStoreTest"
-Got boot device = IOService:/AppleACPIPlatformExpert/PCI0/AppleACPIPCI/S10@2/AppleAHCI/PRT2@2/IOAHCIDevice@0/AppleAHCIDiskDriver/IOAHCIBlockStorageDevice/IOBlockStorageDriver/QEMU HARDDISK Media/IOGUIDPartitionScheme/Untitled 2@2/AppleAPFSContainerScheme/BSD root: disk3s4, major 1, minor 13
-bufattr_get_apfs:8238: Volume not mounted
-disk3s4: device is not readable.
-hfs_mountfs: buf_meta_bread failed with 13
-hfs_mount: hfs_mountfs returned error=13 for device unknown-dev
-hfs_mountroot failed: 13
-apfs_vfsop_mountroot:2745: apfs: mountroot called!
-dev_init:296: disk3 device accelerated crypto: 0 (compiled @ Jul 15 2025 08:10:43)
-dev_init:299: disk3 device_handle block size 4096 block count 31406070 features 0 internal 
-nx_mount:1224: disk3 initializing cache w/hash_size 16384 and cache size 40960
-nx_mount:1553: disk3 checkpoint search: largest xid 2798, best xid 2798 @ 275
-nx_mount:1580: disk3 stable checkpoint indices: desc 274 data 25993
-er_state_obj_get_for_recovery:7551: disk3s4 No ER state object for volume Macintosh HD - rolling is not happening, nothing to recover.
-apfs_vfsop_mount:2408: disk3 Promoter has been locked 
-apfs_vfsop_mount:2478: disk3s4 Rooting from snapshot with xid 302.
-apfs_log_mount_unmount:2039: disk3s4 mounting volume Macintosh HD, requested by: kernel_task (pid 0); parent: kernel_task (pid 0)
-handle_snapshot_mount:1036: disk3s4 mounting snapshot w/snap_xid 302 and sblock oid 0x89475
-nx_get_volume_group:8053: disk3 volume groups tree is not setup yet
-getVolumeGroupMountFrom:8529: disk3 nx_get_volume_group(5EA6026E-A8F8-49FB-99C4-AED728419EB5) failed with error 2
-is_root_hash_authentication_required_osx:371: disk3s4 Release kext with internal build: 0, ARV disabled: 0, booting xid: 0
-is_root_hash_authentication_required:540: disk3s4 Root Volume, root hash authentication is required
-authenticate_root_hash:624: disk3s4 successfully validated on-disk root hash
-handle_snapshot_mount:1231: disk3s4 setting dev block size to 4096 from 512
-handle_mount:765: disk3s4 vol-uuid: 9210929F-5683-4B3E-8385-A273C29343CC block size: 4096 block count: 31406070 (unencrypted; flags: 0x201; features: 21.0.12)
-handle_mount:819: disk3s4 ROSV: apfs mounted RO and is the system volume of a volume group and mounted as the root fs: creating the shadow fs_root
-fs_setup_shadow_fs_root_tree:2862: disk3s4 Created the shadow_fs_root tree <ptr>
-nx_volume_group_update:7978: disk3s4 Set volume (role 0x1) to 575 xid 12e
-Serial keyboardl osatadr_tiendi
-t_program: attempting to load /sbin/launchd
-shared_region: 0x672fbb51ebaaccf [1(launchd)] check_np(0x7ff7bc75bcc8) vm_shared_region_start_address() failed
-Darwin Ignition Sequence Version 1.0.0: Tue Jul 15 08:16:39 PDT 2025; root:libignition-51~2042/libignition_core/RELEASE_X86_64
-libignition: 1: arguments           :
-libignition: 1:   ignition level    : 0x5
-libignition: 1:   force dylib root  : 0x0
-libignition: 1:   halt after stage  : n/a
-libignition: 1: configuration         :
-libignition: 1:   program             : launchd
-libignition: 1:   os environment      : n/a
-libignition: 1:   rd                  : n/a
-libignition: 1:   arp0                : n/a
-libignition: 1:   rp                  : n/a
-libignition: 1:   pivot src           : n/a
-libignition: 1:   root ramdisk        : 0x0
-libignition: 1:   restore             : 0x0
-libignition: 1:   root device info    : 0x0
-libignition: 1:   can haz debugger    : 0x0
-libignition: 1:   rootfs mount flags  : 0x4480d001
-libignition: 1:   ecid                : 0x0
-libignition: 1:   volume group uuid   : 5EA6026E-A8F8-49FB-99C4-AED728419EB5
-libignition: 1:   hardware target     : x86legacyap
-libignition: 1:   initproc            : 0x1
-libignition: 1:   single user         : 0x0
-libignition: 1:   userspace reboot    : 0x0
-libignition: 1:   x86 translated      : 0x0
-libignition: 1:   secure boot level   : 0x3
-libignition: 1:   os version          : n/a
-libignition: 1: parameters          :
-libignition: 1:   version           : 0x1
-libignition: 1:   argc              : 0x1
-libignition: 1:   log fd            : 0xffffffffffffffff
-libignition: 1:   platform          : 0x1
-libignition: 1: boot spec           :
-libignition: 1:   name              : local
-libignition: 1:   stage count       : 0x8
-libignition: 1:        hello: commence primary ignition
-libignition: 1:        hello: hello from launchd.1
-libignition: 1:      preboot: mounting preboot
-libignition: 1:      preboot: preboot device: /dev/disk3s2
-libignition: 1:      preboot: preboot mount point: /System/Volumes/Preboot
-libignition: 1:      preboot: mounting preboot: dev = /dev/disk3s2, uid = 0, gid = 0
-spaceman_metazone_init:172: disk3 metazone for device 0 of size 890009 blocks (encrypted: 0-445004 unencrypted: 445004-857241)
-spaceman_metazone_init:175: disk3 metazone also includes omap zone (857241-890009)
-spaceman_allocation_init:502: disk3 Initialize soft block-out range 0 0 0er_state_obj_get_for_recovery:7551: disk3s2 No ER state object for volume Preboot - rolling is not happening, nothing to recover.
-apfs_log_mount_unmount:2039: disk3s2 mounting volume Preboot, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-handle_mount:765: disk3s2 vol-uuid: 550CCBFA-5EB9-41AB-B239-64ED01AA3467 block size: 4096 block count: 31406070 (unencrypted; flags: 0x1; features: 1.0.2)
-handle_mount:778: disk3s2 setting dev block size to 4096 from 512
-nx_volume_group_update:7897: disk3s2 Volume Preboot role 10 Not a System or data volume
-apfs_should_be_system_mount:660: disk3s2 volume with role 16 will be mounted until system shutdown
-libignition: 1: cryptex1 sniff: detecting cryptex1 directory
-libignition: 1: create graft directories: creating graft directories
-apfs_log_mount_unmount:2039: disk3s2 updating mounted volume Preboot, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-libignition: 1: create graft directories: Cryptexes directory exists
-libignition: 1: create graft directories: incoming Cryptexes directory exists
-libignition: 1: create graft directories: graft point exists: Cryptexes/OS
-spaceman_scan_free_blocks:3374: disk3 scan took 0.015097 s (no trims)
-libignition: 1: downlevel cryptex not installed: 2
-libignition: 1: create graft directories: graft point exists: Cryptexes/App
-libignition: 1: create graft directories: graft point exists: Cryptexes/Incoming/OS
-libignition: 1:        graft: grafting boot cryptexes
-libignition: 1:        graft: os: no root xattr present
-libignition: 1:        graft: os: opening preboot subdirectory: cryptex1/current
-libignition: 1:        graft: os: opened preboot subdirectory: cryptex1/current
-libignition: 1:        graft: os: opened object: name = apticket.x86legacyap.im4m, type = image4 manifest, slot = 0
-libignition: 1:        graft: os: opened object: name = os.dmg, type = os hyper dmg, slot = 1
-libignition: 1:        graft: os: opened object: name = os.dmg.root_hash, type = os hyper dmg seal, slot = 2
-libignition: 1:        graft: os: opened object: name = os.dmg.trustcache, type = os hyper dmg trust cache, slot = 3
-libignition: 1:        graft: os: object spec not present: 4
-libignition: 1:        graft: os: selected im4m spec: image4 manifest
-libignition: 1:        graft: os: grafting: method = syscall, dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.dmg, seal = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.dmg.root_hash, graft point = /System/Volumes/Preboot/Cryptexes/OS, im4m = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/apticket.x86legacyap.im4m
-AppleImage4: failed to get cstring: vnum: 2
-root_hash_execution_cb:2828: img4_firmware_execute: successfully validated the payload and the manifest
-graft_dev_init:377: disk3 os.dmg GRAFT (compiled @ Jul 15 2025 08:10:43)
-graft_dev_init:380: disk3 os.dmg device_handle block size 4096 real block size 4096 block count 392192 features 0 internal 
-nx_mount:1224: os.dmg initializing cache w/hash_size 512 and cache size 2048
-nx_mount:1553: os.dmg checkpoint search: largest xid 21, best xid 21 @ 9
-nx_mount:1580: os.dmg stable checkpoint indices: desc 8 data 16
-er_state_obj_get_for_recovery:7551: os.dmgs1 No ER state object for volume RomeSecurityGlowG22H730.x86_64SystemCryptex - rolling is not happening, nothing to recover.
-is_root_hash_authentication_required_osx:371: os.dmgs1 Release kext with internal build: 0, ARV disabled: 0, booting xid: 0
-is_root_hash_authentication_required:540: os.dmgs1 RSR Graft, root hash authentication is required
-authenticate_root_hash:624: os.dmgs1 successfully validated on-disk root hash
-apfs_lookup_ge_jobj_id:4269: disk3s2 Found OBJID 0x6cf9 type 3
-apfs_graft:604: disk3s2 Graft ino 824, jobj_id range 1699+11538
-apfs_graft:675: disk3s2 successfully grafted ino 824 on dir 535, dev_name [os.dmg]
-libignition: 1:        graft: os: grafted cryptex: dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.dmg, graft point = /System/Volumes/Preboot/Cryptexes/OS, ignored error = 0
-libignition: 1:        graft: querying cryptex dmg node info: os
-libignition: 1: downlevel cryptex not installed: 2
-libignition: 1:        graft: app: no root xattr present
-libignition: 1:        graft: app: opening preboot subdirectory: cryptex1/current
-libignition: 1:        graft: app: opened preboot subdirectory: cryptex1/current
-libignition: 1:        graft: app: opened object: name = apticket.x86legacyap.im4m, type = image4 manifest, slot = 0
-libignition: 1:        graft: app: opened object: name = app.dmg, type = app hyper dmg, slot = 1
-libignition: 1:        graft: app: opened object: name = app.dmg.root_hash, type = app hyper dmg seal, slot = 2
-libignition: 1:        graft: app: opened object: name = app.dmg.trustcache, type = app hyper dmg trust cache, slot = 3
-libignition: 1:        graft: app: object spec not present: 4
-libignition: 1:        graft: app: selected im4m spec: image4 manifest
-libignition: 1:        graft: app: grafting: method = syscall, dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/app.dmg, seal = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/app.dmg.root_hash, graft point = /System/Volumes/Preboot/Cryptexes/App, im4m = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/apticket.x86legacyap.im4m
-AppleImage4: failed to get cstring: vnum: 2
-root_hash_execution_cb:2828: img4_firmware_execute: successfully validated the payload and the manifest
-graft_dev_init:377: disk3 app.dmg GRAFT (compiled @ Jul 15 2025 08:10:43)
-graft_dev_init:380: disk3 app.dmg device_handle block size 4096 real block size 4096 block count 4608 features 0 internal 
-nx_mount:1224: app.dmg initializing cache w/hash_size 512 and cache size 2048
-VM Swap Subsystem is ON
-nx_mount:1553: app.dmg checkpoint search: largest xid 1774, best xid 1774 @ 5
-nx_mount:1580: app.dmg stable checkpoint indices: desc 4 data 49
-er_state_obj_get_for_recovery:7551: app.dmgs1 No ER state object for volume AppCryptex - rolling is not happening, nothing to recover.
-is_root_hash_authentication_required_osx:371: app.dmgs1 Release kext with internal build: 0, ARV disabled: 0, booting xid: 0
-is_root_hash_authentication_required:540: app.dmgs1 RSR Graft, root hash authentication is required
-authenticate_root_hash:624: app.dmgs1 successfully validated on-disk root hash
-apfs_lookup_ge_jobj_id:4269: disk3s2 Found OBJID 0x6cf9 type 3
-apfs_graft:604: disk3s2 Graft ino 828, jobj_id range 13237+3120
-apfs_graft:675: disk3s2 successfully grafted ino 828 on dir 536, dev_name [app.dmg]
-libignition: 1:        graft: app: grafted cryptex: dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/app.dmg, graft point = /System/Volumes/Preboot/Cryptexes/App, ignored error = 0
-libignition: 1:        graft: pre-reboot os: no root xattr present
-libignition: 1:        graft: pre-reboot os: opening preboot subdirectory: cryptex1/current
-libignition: 1:        graft: pre-reboot os: opened preboot subdirectory: cryptex1/current
-libignition: 1:        graft: pre-reboot os: opened object: name = apticket.x86legacyap.im4m, type = image4 manifest, slot = 0
-libignition: 1:        graft: pre-reboot os: opened object: name = os.clone.dmg, type = pre-reboot os hyper dmg, slot = 1
-libignition: 1:        graft: pre-reboot os: opened object: name = os.dmg.root_hash, type = os hyper dmg seal, slot = 2
-libignition: 1:        graft: pre-reboot os: object spec not present: 3
-libignition: 1:        graft: pre-reboot os: object spec not present: 4
-libignition: 1:        graft: pre-reboot os: selected im4m spec: image4 manifest
-libignition: 1:        graft: pre-reboot os: grafting: method = syscall, dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.clone.dmg, seal = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.dmg.root_hash, graft point = /System/Volumes/Preboot/Cryptexes/Incoming/OS, im4m = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/apticket.x86legacyap.im4m
-AppleImage4: failed to get cstring: vnum: 2
-root_hash_execution_cb:2828: img4_firmware_execute: successfully validated the payload and the manifest
-apfs_graft:456: disk3s2 Grafting a clone, share blockmap lut with os.dmg
-graft_dev_init:377: disk3 os.clone.dmg GRAFT (compiled @ Jul 15 2025 08:10:43)
-graft_dev_init:380: disk3 os.clone.dmg device_handle block size 4096 real block size 4096 block count 392192 features 0 internal 
-nx_mount:1224: os.clone.dmg initializing cache w/hash_size 512 and cache size 2048
-nx_mount:1553: os.clone.dmg checkpoint search: largest xid 21, best xid 21 @ 9
-nx_mount:1580: os.clone.dmg stable checkpoint indices: desc 8 data 16
-er_state_obj_get_for_recovery:7551: os.clone.dmgs1 No ER state object for volume RomeSecurityGlowG22H730.x86_64SystemCryptex - rolling is not happening, nothing to recover.
-is_root_hash_authentication_required_osx:371: os.clone.dmgs1 Release kext with internal build: 0, ARV disabled: 0, booting xid: 0
-is_root_hash_authentication_required:540: os.clone.dmgs1 RSR Graft, root hash authentication is required
-authenticate_root_hash:624: os.clone.dmgs1 successfully validated on-disk root hash
-apfs_lookup_ge_jobj_id:4269: disk3s2 Found OBJID 0x6cf9 type 3
-apfs_graft:604: disk3s2 Graft ino 835, jobj_id range 16357+11538
-apfs_graft:675: disk3s2 successfully grafted ino 835 on dir 538, dev_name [os.clone.dmg]
-libignition: 1:        graft: pre-reboot os: grafted cryptex: dmg = /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/cryptex1/current/os.clone.dmg, graft point = /System/Volumes/Preboot/Cryptexes/Incoming/OS, ignored error = 0
-libignition: 1:        graft: querying cryptex dmg node info: pre-reboot os
-libignition: 1:        graft: evaluating os and pre-reboot os node info: clone id [os] = 0x112, clone id [pre-reboot os] = 0x112
-libignition: 1: select os cryptex path: selecting os cryptex path
-libignition: 1: select os cryptex path: dylib cache directory present; not overriding
-libignition: 1: select os cryptex path: not forcing root fallback
-libignition: 1:  dylib_cache: discovering shared library cache
-libignition: 1:  dylib_cache: finding shared cache on cryptex: ignition level = 5, search root fd = 10, subpath = System/Library/dyld/
-libignition: 1:  dylib_cache: opened shared cache directory: /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld
-libignition: 1:      goodbye: ignition sequence complete
-shared_region: 0x672fbb51ebaaccf [1(launchd)] check_np(0x7ff7bc75b128) vm_shared_region_start_address() failed
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h' is adhoc signed.
-ASP: AMFI pointer initialized
-ASP: port is not ready for callouts
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h.01' is adhoc signed.
-ASP: port is not ready for callouts
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h.02' is adhoc signed.
-ASP: port is not ready for callouts
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h.03' is adhoc signed.
-ASP: port is not ready for callouts
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h.04' is adhoc signed.
-ASP: port is not ready for callouts
-shared_region: 0x672fbb51ebaaccf [1(launchd)]: vnode_lookup(/System/Library/dyld/) failed (error=2)
-shared_region: 0x672fbb51ebaaccf [1(launchd)]: vnode_lookup(/System/Library/dyld/) failed (error=2)
-shared_region: 0x672fbb51ebaaccf [1(launchd)]: vnode_lookup(/System/Library/dyld/) failed (error=2)
-shared_region: 0x672fbb51ebaaccf [1(launchd)]: vnode_lookup(/System/Library/dyld/) failed (error=2)
-shared_region: 0x672fbb51ebaaccf [1(launchd)]: vnode_lookup(/System/Library/dyld/) failed (error=2)
-dyld: simulator status (/ rw: false; kernel: false, platform: false; pthread: false
-[AHCI][PRT][001F0240] WaitForLinkPresent::4023:Port 4 PxSSTS: 0x0
-[AHCI][PRT][001F0240] EnablePortOperation::3315:Port 4 - HandleComReset
-[AHCI][PRT][00020030] WaitForLinkPresent::4023:Port 3 PxSSTS: 0x0
-[AHCI][PRT][00020030] EnablePortOperation::3315:Port 3 - HandleComReset
-com.apple.xpc.launchd|2026-10-08 14:08:04.089425 <Notice>: hello
-com.apple.xpc.launchd|2026-10-08 14:08:04.090576 <Notice>: Darwin Bootstrapper Version 7.0.0: Tue Jul 15 08:28:41 PDT 2025; root:libxpc_executables-2462.141.1.706.1~2/launchd/RELEASE_X86_64
-com.apple.xpc.launchd|2026-10-08 14:08:04.090640 <Notice>: boot-args = -v debug=explicit release-type-set not supported without a monitor
-ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>skip attaching fsw to lo0 using legacy TX model0x108 keepsyms=1 serial=3
-com.apple.xpc.launchd|2026-10-08 14:08:04.093124 (system) <Notice>: entering ondemand mode
-com.apple.xpc.launchd|2026-10-08 14:08:04.093279 (system) <Notice>: created
-com.apple.xpc.launchd|2026-10-08 14:08:04.094398 (fsck) <Notice>: Doing boot task
-vnode_create_internal: alias vnode <ptr> is in state of change (start)
-vnode_create_internal: alias vnode <ptr> is in state of change (end)
-vnode_create_internal: alias vnode <ptr> is in state of change (start)
-vnode_create_internal: alias vnode <ptr> is in state of change (end)
-sendIONotification:2566: Sending notification about e0084006 for APFS snapshot 1.14
-sendIONotification:2572: Sending additional notification about e0084006 for the parent of APFS snapshot 1.14
-** Checking the container superblock.
-   Checking the checkpoint with transaction ID 2798.
-** Checking the object map.
-** Checking volume /dev/rdisk3s4.
-** Checking the APFS volume superblock.
-   The volume Macintosh HD was formatted by storagekitd (2142.140.9.703.1) and last modified by apfs_kext (2142.140.9.703.1).
-** QUICKCHECK ONLY; FILESYSTEM CLEAN
-sendIONotification:2566: Sending notification about e0084007 for APFS snapshot 1.14
-sendIONotification:2572: Sending additional notification about e0084007 for the parent of APFS snapshot 1.14
-com.apple.xpc.launchd|2026-10-08 14:08:04.361320 (mount-phase-1) <Notice>: Doing boot task
-mount_by_role:383: Mounting /dev/disk3s6 on /System/Volumes/VM
-er_state_obj_get_for_recovery:7551: disk3s6 No ER state object for volume VM - rolling is not happening, nothing to recover.
-apfs_log_mount_unmount:2039: disk3s6 mounting volume VM, requested by: apfs_boot_util (pid 4); parent: launchd (pid 1)
-handle_mount:765: disk3s6 vol-uuid: 5BAEA55D-8038-4777-8357-D28F45D5CED3 block size: 4096 block count: 31406070 (unencrypted; flags: 0x1; features: 1.0.2)
-handle_mount:778: disk3s6 setting dev block size to 4096 from 512
-nx_volume_group_update:7897: disk3s6 Volume VM role 8 Not a System or data volume
-kern_direct_file(/System/Volumes/VM/kernelcore): vp size 1048576, alloc 1048576, mp free 105637740544, keep free 1048576
-max iom o0uxn2t0_0b0y0_0r0o lbey:t3e4s7
-: volukmeer n_ope/nd_efvi/le_fdori_dsirke3cts_i2o  towoki 2t mhs
- roOpleneed  =fil e 1/Sy0s taelmr/eVaodlyu mmeosu/nVtMe/dk eartn e/lScyosrtee,m kseirzne_ o1p0e4n8_5f7i6l,e _efxotre_ndtisr e1c,t _miaox(i<op t2r0>0,0 000)0 
-sksedr n0_
-open_file_forp_odlilreedc tf_iiloe  tmoaojk o2r  m1s, 
-mOipneonre d4 ,f iblleo c/kSsyisztee m4/0V9o6l,u mpeosl/lVeMr/sk e5r
-nelcore, size 1048576, extents 1, maxio 2000000 ssd 0
-polled file major 1, minor 4, blocksize 4096, pollers 5
-Opened corefile of size 1 MB
-/Volumes/Preboot in APFS container for root device /dev/disk3s1
-mount_by_role:383: Mounting /dev/disk3s5 on /System/Volumes/Update
-er_state_obj_get_for_recovery:7551: disk3s5 No ER state object for volume Update - rolling is not happening, nothing to recover.
-apfs_log_mount_unmount:2039: disk3s5 mounting volume Update, requested by: apfs_boot_util (pid 4); parent: launchd (pid 1)
-handle_mount:765: disk3s5 vol-uuid: 6033BC27-C3FD-452D-BE23-767460115DBD block size: 4096 block count: 31406070 (unencrypted; flags: 0x1; features: 1.0.2)
-handle_mount:778: disk3s5 setting dev block size to 4096 from 512
-nx_volume_group_update:7897: disk3s5 Volume Update role c0 Not a System or data volume
-apfs_should_be_system_mount:660: disk3s5 volume with role 192 will be mounted until system shutdown
-com.apple.xpc.launchd|2026-10-08 14:08:04.401169 (data-protection) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.405950 (data-protection) <Error>: posix_spawn(): 86: Bad CPU type in executable
-com.apple.xpc.launchd|2026-10-08 14:08:04.405979 (detect-installed-roots) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.406339 <Notice>: No cookie from system volume
-com.apple.xpc.launchd|2026-10-08 14:08:04.406370 <Notice>: No cookie: /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/.roots-installed
-com.apple.xpc.launchd|2026-10-08 14:08:04.406413 <Notice>: No cookie: /System/Volumes/iSCPreboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/.roots-installed
-com.apple.xpc.launchd|2026-10-08 14:08:04.406425 (select-boot-mode) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.406435 <Error>: fsctl(APFSIOC_GET_DEV_BY_ROLE) error: 2
-com.apple.xpc.launchd|2026-10-08 14:08:04.406458 <Notice>: No cookie: /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/var/db/.com.apple.eacs
-com.apple.xpc.launchd|2026-10-08 14:08:04.406471 <Notice>: No cookie: /System/Volumes/Preboot/5EA6026E-A8F8-49FB-99C4-AED728419EB5/var/db/.com.apple.templatemigration
-com.apple.xpc.launchd|2026-10-08 14:08:04.406477 (commit-boot-mode) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.406483 <Notice>: boot-mode committed: (null)
-com.apple.xpc.launchd|2026-10-08 14:08:04.406490 (auto-pivot-root) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.406497 (allow-non-platform-code) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.406502 <Notice>: allowing non-platform code now
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4031257334] [INFO] [Subsystem: launchd] [Event: fsck] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4032695875] [INFO] [Subsystem: launchd] [Event: mount-phase-1] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4034216221] [INFO] [Subsystem: launchd] [Event: data-protection] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4035780954] [ERROR] [Subsystem: launchd] [Event: data-protection] posix_spawn(): 86: Bad CPU type in executable
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4037572892] [INFO] [Subsystem: launchd] [Event: detect-installed-roots] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4041129826] [INFO] [Subsystem: launchd] [Event: select-boot-mode] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4044657140] [INFO] [Subsystem: launchd] [Event: commit-boot-mode] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4046810293] [INFO] [Subsystem: launchd] [Event: auto-pivot-root] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-[System Event] [4048414066] [INFO] [Subsystem: launchd] [Event: allow-non-platform-code] Doing boot task
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-com.apple.xpc.launchd|2026-10-08 14:08:04.442237 <Notice>: Flushed 22 logs [limit: 20]
-launchd.log: fopen(/private/var/log/com.apple.xpc.launchd/launchd.log): 2
-com.apple.xpc.launchd|2026-10-08 14:08:04.443729 (restore-datapartition) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 14:08:04.444672 (restore-datapartition) <Notice>: optional boot task not present
-com.apple.xpc.launchd|2026-10-08 14:08:04.444702 (mount-phase-2) <Notice>: Doing boot task
-get_volume_from_volume_group:213: found volume /dev/disk3s1 with role = 40 in APFS container for root device /dev/disk3s1
-mount_by_role:383: Mounting /dev/disk3s1 on /System/Volumes/Data
-er_state_obj_get_for_recovery:7551: disk3s1 No ER state object for volume Macintosh HD - Data - rolling is not happening, nothing to recover.
-apfs_log_mount_unmount:2039: disk3s1 mounting volume Macintosh HD - Data, requested by: apfs_boot_util (pid 7); parent: launchd (pid 1)
-handle_mount:765: disk3s1 vol-uuid: 5EA6026E-A8F8-49FB-99C4-AED728419EB5 block size: 4096 block count: 31406070 (unencrypted; flags: 0x1; features: 1.0.12)
-handle_mount:778: disk3s1 setting dev block size to 4096 from 512
-nx_volume_group_update:7978: disk3s1 Set volume (role 0x40) to 402 xid 0
-setup_rosv_data:630: failed to stitch firmlinks for root device /dev/disk3s1, ignoring error (c002) ...
-unmount_recursively:880: Could not unmount path /System/Volumes/BaseSystem: 22 (Invalid argument).
-unmount_basesystem:938: No BaseSystem mounted.
-ccoommpr.easpspolre_.stxoprce._lsatuonpc_hcdo|m2p0a2c6t-i1o0n- 0=8  F1A6L:S0E8
-:04.484500 (enable-swap) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:04.489845 <Notice>: swap enabled
-com.apple.xpc.launchd|2026-10-08 16:08:04.489877 (sandbox-enable-root-translation) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:04.489917 (init-with-data-volume) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:04.503374 (deferred_install) <Notice>: Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:04.504428 (deferred_install) <Notice>: optional boot task not present
-com.apple.xpc.launchd|2026-10-08 16:08:04.504457 (fips) <Notice>: Doing boot task
-About to call the FIPS_POST function in the corecrypto.dylib
-Tracing: disabled
-FIPSPOST_USER [4122341638] fipspost_post:152: [FIPSPOST][Module-ID] Apple corecrypto Module v13.0 [Intel, User, Software, SL1]
-FIPSPOST_USER [4124216852] fipspost_post:160: PASSED: (0 ms) - fipspost_post_hmac
-FIPSPOST_USER [4126775212] fipspost_post:164: PASSED: (1 ms) - fipspost_post_integrity
-FIPSPOST_USER [4127526291] fipspost_post:168: PASSED: (0 ms) - fipspost_post_indicator
-FIPSPOST_USER [4128236441] fipspost_post:169: PASSED: (0 ms) - fipspost_post_aes_ecb
-FIPSPOST_USER [4128917565] fipspost_post:170: PASSED: (0 ms) - fipspost_post_aes_cbc
-FIPSPOST_USER [4131746833] fipspost_post:171: PASSED: (2 ms) - fipspost_post_rsa_sig
-FIPSPOST_USER [4138423105] fipspost_post:172: PASSED: (5 ms) - fipspost_post_ecdsa
-FIPSPOST_USER [4139468063] fipspost_post:173: PASSED: (0 ms) - fipspost_post_ecdh
-FIPSPOST_USER [4140290436] fipspost_post:174: PASSED: (0 ms) - fipspost_post_aes_ccm
-FIPSPOST_USER [4141231955] fipspost_post:175: PASSED: (0 ms) - fipspost_post_aes[AHCI][PRT][001F0240] WaitForLinkPresent::4023:Port 4 PxSSTS: 0x0
-[AHCI][PRT][001F0240] HandleComReset::3832:linkPresent 0 - Port 4
-[AHCI][PRT][001F0240] EnablePortOperation::3322:Port 4 - COMRESET did not proceed
-[AHCI][PRT][001F0240] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][001F0250] InitializePort::689:Port 5
-[AHCI][PRT][001F0250] EnablePortOperation::3281:Enabling port 5
-[AHCI][PRT][001F0250] setPowerState::2937:inNewPowerState: 2
-_cmac
-FIPSPOST_USER [4146726910] fipspost_post:176: PASSED: (0 ms) - fipspost_post_hkdf
-[AHCI][PRT][00020030] WaitForLinkPresent::4023:Port 3 PxSSTS: 0x0
-[AHCI][PRT][00020030] HandleComReset::3832:linkPresent 0 - Port 3
-[AHCI][PRT][00020030] EnablePortOperation::3322:Port 3 - COMRESET did not proceed
-[AHCI][PRT][00020030] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][00020040] InitializePort::689:Port 4
-[AHCI][PRT][00020040] EnablePortOperation::3281:Enabling port 4
-[AHCI][PRT][00020040] setPowerState::2937:inNewPowerState: 2
-FIPSPOST_USER [4159991936] fipspost_post:177: PASSED: (12 ms) - fipspost_post_pbkdf
-FIPSPOST_USER [4160855311] fipspost_post:178: PASSED: (0 ms) - fipspost_post_drbg_hmac
-FIPSPOST_USER [4161721597] fipspost_post:180: PASSED: (0 ms) - fipspost_post_kdf_ctr
-FIPSPOST_USER [4162547064] fipspost_post:181: PASSED: (0 ms) - fipspost_post_aes_gcm
-FIPSPOST_USER [4163383473] fipspost_post:182: PASSED: (0 ms) - fipspost_post_aes_xts
-FIPSPOST_USER [4164195808] fipspost_post:183: PASSED: (0 ms) - fipspost_post_tdes_ecb
-FIPSPOST_USER [4165007163] fipspost_post:184: PASSED: (0 ms) - fipspost_post_drbg_ctr
-FIPSPOST_USER [4170130176] fipspost_post:186: PASSED: (4 ms) - fipspost_post_ffdh
-FIPSPOST_USER [4173744535] fipspost_post:187: PASSED: (2 ms) - fipspost_post_rsa_enc_dec
-FIPSPOST_USER [4174606965] fipspost_post:206: all tests PASSED (52 ms)
-Returned from calling the FIPS_POST function in the corecrypto.dylib: result = true
-com.apple.xpc.launchd|2026-10-08 16:08:04.567763 (cache-start) <Notice>: Doing boot task
-libBootCache: No extents for file
-libBootCache: Unable to get playlist for /var/db/dslocal/nodes/Default/sqlindex-wal: 2 No such file or directory
-libBootCache: Requesting leaf omap extents for /System/Volumes/Preboot returned 0 extents
-com.apple.xpc.launchd|2026-10-08 16:08:04.688805 (dirs_cleaner) <Notice>: Doing boot task
-[AHCI][PRT][001F0250] WaitForLinkPresent::4023:Port 5 PxSSTS: 0x0
-[AHCI][PRT][001F0250] EnablePortOperation::3315:Port 5 - HandleComReset
-[AHCI][PRT][00020040] WaitForLinkPresent::4023:Port 4 PxSSTS: 0x0
-[AHCI][PRT][00020040] EnablePortOperation::3315:Port 4 - HandleComReset
-[System Event] [5119984487] [INFO] [Subsystem: launchd] [Event: restore-datapartition] Doing boot task
-Couldn't build index for com.apple.init_featureflags: Not eligible for acceleration
-[System Event] [5163293473] [INFO] [Subsystem: launchd] [Event: restore-datapartition] optional boot task not present
-[System Event] [5164311584] [INFO] [Subsystem: launchd] [Event: mount-phase-2] Doing boot task
-[System Event] [5165119642] [INFO] [Subsystem: launchd] [Event: enable-swap] Doing boot task
-[System Event] [5165843550] [INFO] [Subsystem: launchd] [Event: sandbox-enable-root-translation] Doing boot task
-[System Event] [5166924644] [INFO] [Subsystem: launchd] [Event: init-with-data-volume] Doing boot task
-[System Event] [5168690607] [INFO] [Subsystem: launchd] [Event: deferred_install] Doing boot task
-[System Event] [5170688047] [INFO] [Subsystem: launchd] [Event: deferred_install] optional boot task not present
-[System Event] [5171480836] [INFO] [Subsystem: launchd] [Event: fips] Doing boot task
-[System Event] [5172069118] [INFO] [Subsystem: launchd] [Event: cache-start] Doing boot task
-[System Event] [5172683874] [INFO] [Subsystem: launchd] [Event: dirs_cleaner] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:05.511201 <Notice>: launchd logging initialized. name: com.apple.xpc.launchd pid: 1
-com.apple.xpc.launchd|2026-10-08 16:08:05.511217 (xpcroleaccountd) <Notice>: Doing boot task
-[System Event] [5174793968] [INFO] [Subsystem: launchd] [Event: xpcroleaccountd] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:05.522300 (init_featureflags) <Notice>: Doing boot task
-[System Event] [5179635321] [INFO] [Subsystem: launchd] [Event: init_featureflags] Doing boot task
-[AHCI][PRT][001F0250] WaitForLinkPresent::4023:Port 5 PxSSTS: 0x0
-[AHCI][PRT][001F0250] HandleComReset::3832:linkPresent 0 - Port 5
-[AHCI][PRT][001F0250] EnablePortOperation::3322:Port 5 - COMRESET did not proceed
-[AHCI][PRT][001F0250] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][HBA][001F0200] start::512:Successfully initialized AHCI controller
-[AHCI][PRT][00020040] WaitForLinkPresent::4023:Port 4 PxSSTS: 0x0
-[AHCI][PRT][00020040] HandleComReset::3832:linkPresent 0 - Port 4
-[AHCI][PRT][00020040] EnablePortOperation::3322:Port 4 - COMRESET did not proceed
-[AHCI][PRT][00020040] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][PRT][00020050] InitializePort::689:Port 5
-[AHCI][PRT][00020050] EnablePortOperation::3281:Enabling port 5
-[AHCI][PRT][00020050] setPowerState::2937:inNewPowerState: 2
-[AHCI][PRT][00020050] WaitForLinkPresent::4023:Port 5 PxSSTS: 0x0
-[AHCI][PRT][00020050] EnablePortOperation::3315:Port 5 - HandleComReset
-[AHCI][PRT][00020050] WaitForLinkPresent::4023:Port 5 PxSSTS: 0x0
-[AHCI][PRT][00020050] HandleComReset::3832:linkPresent 0 - Port 5
-[AHCI][PRT][00020050] EnablePortOperation::3322:Port 5 - COMRESET did not proceed
-[AHCI][PRT][00020050] StartPort::1215:EnablePortOperation returned: 0xE00002D6
-[AHCI][HBA][00020000] start::512:Successfully initialized AHCI controller
-com.apple.xpc.launchd|2026-10-08 16:08:08.318937 (EndpointSecurity) <Notice>: Doing boot task
-[System Event] [7932101818] [INFO] [Subsystem: launchd] [Event: EndpointSecurity] Doing boot task
-endpointsecurityd: Starting early boot task
-endpointsecurityd: Loaded 0 early boot clients from .early_boot.plist
-endpointsecurityd: Successfully registered early boot clients with kernel
-com.apple.xpc.launchd|2026-10-08 16:08:09.122706 (rc.server) <Notice>: Doing boot task
-[System Event] [8731850860] [INFO] [Subsystem: launchd] [Event: rc.server] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:09.123482 (rc.server) <Notice>: optional boot task not presenCouldn't build index for com.apple.tzinit: Not eligible for acceleration
-t
-[System Event] [8734805433] [INFO] [Subsystem: launchd] [Event: rc.server] optional boot task not present
-com.apple.xpc.launchd|2026-10-08 16:08:09.123490 (tzinit) <Notice>: Doing boot task
-[System Event] [8737937347] [INFO] [Subsystem: launchd] [Event: tzinit] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:09.127516 (dirhelper) <Notice>: Doing boot task
-[System Event] [8739230402] [INFO] [Subsystem: launchd] [Event: dirhelper] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:10.019086 (rootless-init) <Notice>: Doing boot task
-[System Event] [9628191507] [INFO] [Subsystem: launchd] [Event: rootless-init] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:10.023085 (finish-demo-restore) <Notice>: Doing boot task
-[System Event] [9632364902] [INFO] [Subsystem: launchd] [Event: finish-demo-restore] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:10.023993 (finish-demo-restore) <Notice>: optional boot task not present
-[System Event] [9634307522] [INFO] [Subsystem: launchd] [Event: finish-demo-restore] optional boot task not present
-com.apple.xpc.launchd|2026-10-08 16:08:10.024225 (systemstats) <Notice>: Doing boot task
-[System Event] [9636639279] [INFO] [Subsystem: launchd] [Event: systemstats] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:08:10.031823 (prng_seedctl) <Notice>: Doing boot task
-[System Event] [9640943110] [INFO] [Subsystem: launchd] [Event: prng_seedctl] Doing boot task
-Couldn't build index for com.apple.prng_seedctl: Not eligible for acceleration
-kern.prng.user_reseed_count: (-1) (2) No such file or directory
-failed to load virtual random: (-147) (-536870212)
-com.apple.xpc.launchd|2026-10-08 16:08:10.076901 <Notice>: launchd UUID: 09DF0F1A-C7AC-3E86-9614-22CFC29CD717
-com.apple.xpc.launchd|2026-10-08 16:08:10.076923 (boot) <Notice>: Early boot complete. Continuing system boot.
-[System Event] [9687616700] [INFO] [Subsystem: launchd] [Event: boot] Early boot complete. Continuing system boot.
-ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>com.apple.xpc.launchd|2026-10-08 16:08:10.130160 (cache-tag) <Notice>: Doing boot task
-[System Event] [9739286314] [INFO] [Subsystem: launchd] [Event: cache-tag] Doing boot task
-Couldn't build index for com.apple.Installer-Progress: Not eligible for acceleration
-Couldn't build index for com.apple.uninstalld: Not eligible for acceleration
-Couldn't build index for com.apple.dynamic_pager: Not eligible for acceleration
-Couldn't build index for com.apple.KernelEventAgent: Not eligible for acceleration
-Couldn't alloc class "AppleKeyStoreTest"
-AppleCredentialManagerUserClient: start: session_uid = ffffffff.
-AppleCredentialManagerUserClient: start: session_uid = ffffffff.
-AppleCredentialManagerUserClient: start: session_uid = ffffffff.
-ACMFirstResponderKernelService: _onGetCapabilities: T208: NO.
-ACMTRM: _onDaemonStarted: starting TRM policy engine.
-AssertMacros: consoleUsersPropertyObject (value: 0x0), ---, file: /AppleInternal/Library/BuildRoots/cba74612-6165-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMRestrictedModeKernelSerACMTRM: _startPolicy: startingInBaseSystem=NO startingInNormalOS=YES pivotingToNormalOS=NO | startupFlags=0x0 | initial deviceLockState=LOCKED(1) keybagState=0x0 consoleState=0x0.
-ACMTRM-S: _loadAll: called, isLockerAvailable=NO.
-ACM: TRMAccCache_SetupEmpty: called, cacheSize=48 expiration=2592000.
-ACMTRM-S: _loadAll: fetching *policy* <- daemon (gen=0 osLen=53 dataLen=53 ver=11).
-ACMTRM-S: _loadAll: fetching *analytics* <- daemon (gen=0 osLen=400 dataLen=400 ver=1).
-ACMTRM-A: onPolicyStarted: *analytics* successfully loaded.
-ACMKernelService: initValueFromBootArgAliasesUInt32: analytics period = 86400 (default).
-ACMTRM-A: setProperty: propCollectionPeriod=86400 (prev=0).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: setProperty: propPolicyModeTimeout=604800 (prev=0).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: setProperty: propGracePeriodBoundedTimeout=259200 (prev=0).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: incrementCounter: cntDaemonStarted=35.
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: stopSegment: segDeviceLockState_Unlocked: count=11 totalDuration=40245 (origStartTime=1791467349 lastDuration=1141).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: resumeSegment: segDeviceLockState_Locked: count=12 totalDuration=35115 startTime=1791468490.
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _logPolicy: LOADED: ver=11 smTm=0 poRsn=0 gpTm=0 smExp=NO gpBlk=NO suTm=1791467349 svTm=1791467349 gpRsn=0 cMs=NO upTm=0 disBy=8.
-ACMTRM: _logConfig: caller=_loadConfig ver=1 gSw=1 GP=2 Pro=2.
-ACMKernelService: initValueFromBootArgAliasesUInt32: config profile = 4294967295 (default).
-AssertMacros: dtDefaults (value: 0x0), ---, file: /AppleInternal/Library/BuildRoots/cba74612-6165-11f0-ad86-deaaae182910/Library/Caches/com.apple.xbs/Sources/AppleCredentialManager/AppleCredentialManager/Services/ACMRestrictedModeKernelService.cpp:2070
-ACMTRM: _getDefaultConfigProfile: config profile: 2 (boot-arg=2 edt-prop=2).
-ACMTRM-A: setProperty: propGracePeriodTimeout=259200 (prev=0).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _mapAndPublishTRM: set TRM_GracePeriodTimeout = 259200.
-ACMTRM: _mapAndPublishTRM: sending kIOMessageServicePropertyChange(#changes=1) while LOCKED(1), TRM: 604800/U(0) 259200/-(255) M=255/4294967295/4294967295 ---(255)/---(255) L=255 BS=255 R=255 UP=86400/255, CUR: U(0) -(255).
-ACMTRM-A: setProperty: propPolicyDisabledByBits=8 (prev=0).
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO* DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO*).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO* SmCrd=NO ApSet=NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO* CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO DwOS=NO ChBd=NO GSw=NO CPro=NO* BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACMTRM-C: onPolicyStarted: *acc-cache* not found.
-ACMTRM: _startPolicy: timePolicyViolated=NO (saveTime=1791467349 bootCalTime=1791468490 (delta=1141) bootUpTime=10 nowUp=1791468490).
-ACMTRM: _startPolicy: policyViolated=NO (timePolicyViolated=NO passcodeThreshold=NO corruptedStateDetected=NO unexpectedShutdownDetected=NO).
-ACMTRM: _publish: _startPolicy LOCKED(1) reason=0 en=NO pro=2/2 pasThr=NO kb=0 con=0 poRsn=0 smExp=NO gpBlk=NO miss=NO seen=0 now=1791468490(0) | PMT=0/0 GPT=0/0/(0) UPT=0/0.
-ACMTRM: _mapAndPublishTRM: set TRM_CacheMiss = False.
-ACMTRM: _mapAndPublishTRM: set TRM_CacheMissThreshold = 5.
-ACMTRM: _mapAndPublishTRM: set TRM_CacheMissCount = 0.
-ACMTRM: _mapAndPublishTRM: set TRM_ConfigProfile = AskForNewAccessories(2).
-ACMTRM: _mapAndPublishTRM: set TRM_EffectiveConfigProfile = AskForNewAccessories(2).
-ACMTRM: _mapAndPublishTRM: set TRM_DeviceLocked = True.
-ACMTRM: _mapAndPublishTRM: set TRM_BaseSystem = False.
-ACMTRM: _mapAndPublishTRM: set TRM_Recovery = False.
-ACMTRM: _mapAndPublishTRM: set TRM_UnlockedPeriod = False.
-ACMTRM: _mapAndPublishTRM: sending kIOMessageServicePropertyChange(#changes=9) while LOCKED(1), TRM: 604800/U(0) 259200/-(255) M=0/5/0 AFNA(2)/AFNA(2) L=1 BS=0 R=0 UP=86400/0, CUR: U(0) X(0).
-ACMTRM: _logPolicy: SAVING: ver=11 smTm=0 poRsn=0 gpTm=0 smExp=NO gpBlk=NO suTm=0 svTm=1791468490 gpRsn=0 cMs=NO upTm=0 disBy=8.
-ACMTRM-S: setData: saving *policy* (dataLen=53) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _registerBioNotifier: Biometric driver not detected.
-ACMTRM-C: notifyClients_AccCache_Refreshed: sent kACMTRMMessage_AccCache_Refreshed(0) -> 0xe00002c7.
-ACMTRM: _isEnrollmentNeeded: enrollmentReason: eraseInstall=NO upgradeFromPreTRMSystem=NO.
-ACMTRM: _isEnrollmentNeeded: enrollmentNeeded=NO (loadedVersion=11).
-ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>Couldn't build index for com.apple.usbmuxd: Not eligible for acceleration
-bufattr_get_apfs:8188: Only accept buf I/O, no raw disk access
-disk3s4s1: device is not readable.
-AppleKeyStore:8084:77: unexpected session: 100000 uid: -1 requested by: UserEventAgent (77)
-AppleKeyStore:12143:77: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>ALF, old data swfs_pid_entry <ptr>, updaterules_msg <ptr>, updaterules_state <ptr>Couldn't build index for com.apple.systemkeychain: Not eligible for acceleration
-Couldn't build index for com.apple.socketfilterhelper: Not eligible for acceleration
-ifnet_attach: All kernel threads created for interface en0 have been scheduled at least once. Proceeding.
-AppleKeyStore:8084:130: unexpected session: 100000 uid: -1 requested by: PerfPowerServices (130)
-AppleKeyStore:12143:130: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-AppleKeyStore:8084:130: unexpected session: 100000 uid: -1 requested by: PerfPowerServices (130)
-AppleKeyStore:12143:130: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-_dlil_get_flowswitch_buffer_size: en0 1500 1500
-KextLog: kernelmanagerd is not active
-Couldn't build index for com.apple.audio.DriverHelper: Not eligible for acceleration
-AppleKeyStore:8084:191: unexpected session: 100000 uid: -1 requested by: containermanagerd (191)
-AppleKeyStore:12143:191: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-Couldn't build index for com.apple.systemstatusd: Not eligible for acceleration
-AppleKeyStore:12143:231: operation failed (sel: 17 ret: e00002f0, 205, 100008)
-Couldn't build index for com.apple.CodeSigningHelper: Not eligible for acceleration
-Couldn't alloc class "AppleKeyStoreTest"
-Couldn't obtain preoslog region: result = -1, preoslog_pa = 0, preoslog_size = 0
-NAT64 prefixes purged from Interface en0
-NAT64 prefixes purged from Interface en0
-NAT64 prefixes purged from Interface en0
-NAT64 prefixes purged from Interface en0
-Couldn't build index for com.apple.digest-service: Not eligible for acceleration
-com.apple.xpc.launchd|2026-10-08 16:08:12.082643 (system/com.apple.appleh13camerad [235]) <Error>: Missing executable detected. Job: 'com.apple.appleh13camerad' Executable: '/usr/sbin/appleh13camerad'
-Couldn't build index for com.apple.automount: Not eligible for acceleration
-Couldn't build index for com.apple.kextload: Not eligible for acceleration
-RTC: setGMTTimeOfDay 1791468487
-apfs_keybag_init:2649: failed to initialize volume keybag, err = 2
-apfs_keybag_init:2649: failed to initialize volume keybag, err = 2
-apfs_keybag_init:2649: failed to initialize volume keybag, err = 2
-apfs_keybag_init:2649: failed to initialize volume keybag, err = 2
-apfs_keybag_init:2649: failed to initialize volume keybag, err = 2
-com.apple.xpc.launchd|2026-10-08 16:08:07.551039 (system/com.apple.iomfb_bics_daemon [90]) <Error>: Missing executable detected. Job: 'com.apple.iomfb_bics_daemon' Executable: '/usr/libexec/IOMFB_bics_daemon'
-KextLog: kernelmanagerd is not active
-KextLog: kernelmanagerd is not active
-apfs_load_inode_internal:6553: disk3s1 *** reset ino 18435 size back to 0 (from 3327)
-print_unknown_ioctl:18502: disk3s2 unknown ioctl _IOW('X', 2, 48) (0x80305802), pid = 104
-print_unknown_ioctl:18502: disk3s4 unknown ioctl _IOW('X', 2, 48) (0x80305802), pid = 104
-print_unknown_ioctl:18502: disk3s1 unknown ioctl _IOW('X', 2, 48) (0x80305802), pid = 104
-KextLog: Loading FileSet KC(s)
-KextLog: Loading Pageable KC from file /System/Library/KernelCollections/SystemKernelExtensions.kc
-KextLog: Collection UUID matches with loaded KCs.
-KextLog: Loading Aux KC from file /Library/KernelCollections/AuxiliaryKernelExtensions.kc
-KextLog: Collection UUID matches with loaded KCs.
-Matching service count = 14
-Matching service count = 16
-Matching service count = 16
-Matching service count = 32
-deferred rematching count 1
-Driver com.apple.DriverKit-IOUserDockChannelSerial has crashed 0 time(s)
-IOG flags 0x3 (0x51)
-DK: IOUserDockChannelSerial-0x100000305 waiting for server com.apple.IOUserDockChannelSerial-100000305
-No Generation from SMC.
-No Generation from SMC.
-X86PlatformPlugin::getCPUCStates - C000 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - C000 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUPStates - C000 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - C000 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::publishACPIStates - Failed to get max non-turbo PState. Set max non-turbo PState to default value 1
-X86PlatformPlugin::publishACPIStates - Failed to get max non-turbo PState. Set max non-turbo PState to default value 1
-X86PlatformPlugin::getCPUCStates - C001 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - C001 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUPStates - C001 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - C001 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::getCPUCStates - C002 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - C002 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUPStates - C002 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - C002 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::getCPUCStates - C003 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - C003 ACST and _CST evaluations failed!
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUCStates - _CST did not return a package
-X86PlatformPlugin::getCPUPStates - C003 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - C003 APSS and _PSS evaluations failed!
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::getCPUPStates - acpiPSArrayObj is not an valid OSArray
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-X86PlatformPlugin::publishACPIStates - Failed to get CPU P States!
-IOPPF - IODeviceTree:/efi/platform/StartupPowerEvents: 0x0
-IOPPF - IODeviceTree:/efi/platform/StartupPowerEvents: 0x0
-nfs_kext_start: successfully loaded NFS kext
-Driver com.apple.AppleUserHIDDrivers has crashed 0 time(s)
-DK: AppleUserAUSpBHposltHeIDIPDevAipcepende-0rx1:00:00p03r0fo wbaietin(g IfoOr Rseervsero cuomr.acppeles.d)ri
-verkit.Appl
-eUse*rH*IDDriver** [Broadcs-omBlue10tooth020007030U3S0fB
-Toprena bny sIOpHIoDErvetnt]Dr[iviern 0ix1t00]00 03-17- ( 0xe0)n
-tCoeulrdni'tn agll oc* c*la*ss* "
-AppleK*ey*St*or*eT es[t"B
-rHIoD: Legacy shim 2
-  IOTimeSyncTimeSayndcTcimoePmorBt(l0xu52e54t00oc9o18t27h002080):7 C0re3atUedS gBenTerrala nnotsifpieor r<pttr]> [foir nloicatl ]cl oc-k -po rte <xptir>t
-ing -- success ****
-
-**** [BroadcomBluetoothHostControllerUSBTransport][init] -- entering ****
-**** [BroadcomBluetoothHostControllerUSBTransport][init] -- exiting -- success ****
-
-**** [CSRBluetoothHostControllerUSBTransport][init] -- entering ****
-**** [CSRBluetoothHostControllerUSBTransport][init] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerPCIeTransport][init] -- entering ****
-**** [IOBluetoothHostControllerPCIeTransport][init] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerTransport][init] -- entering ****
-**** [IOBluetoothHostControllerTransport][init] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerUARTTransport][init] -- entering ****
-**** [IOBluetoothHostControllerUARTTransport][init] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerUSBTransport][init] -- entering ****
-**** [IOBluetoothHostControllerUSBTransport][init] -- exiting -- success ****
-
-**** [IOBluetoothPacketLogger][init] -- entering ****
-**** [IOBluetoothPacketLogger][init] -- exiting -- success ****
-
-**** [IOBluetoothSerialManager][init] -- entering ****
-**** [IOBluetoothSerialManager][init] -- exiting -- success ****
-Driver com.apple.AppleUserHIDDrivers has craApshpedle I0P Atime(s)
-DK: AppleUserHIDEventDriver-0x10000031f waiting for server com.apple.driverkippt.eApnpledUesre:r:HsItDaDrritve(rIOsR-10e0sou00r03ces0f)
- <1>
-
-**** [BroadcomBluetooth20703USBTransport][start] -- entering ****
-**** [BroadcomBluetooth20703USBTransport][start] -- exiting -- success ****
-
-**** [BroadcomBluetoothHostControllerUSBTransport][start] -- entering ****
-**** [BroadcomBluetoothHostControllerUSBTransport][start] -- exiting -- success ****
-
-**** [CSRBluetoothHostControllerUSBTransport][start] -- entering ****
-**** [CSRBluetoothHostControllerUSBTransport][start] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerPCIeTransport][start] -- entering ****
-**** [IOBluetoothHostControllerPCIeTransport][start] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerTransport][start] -- entering ****
-**** [IOBluetoothHostControllerTransport][start] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerUARTTransport][start] -- entering ****
-**** [IOBluetoothHostControllerUARTTransport][start] -- exiting -- success ****
-
-**** [IOBluetoothHostControllerUSBTransport][start] -- entering ****
-**** [IOBluetoothHostControllerUSBTransport][start] -- exiting -- success ****
-
-**** [IOBluetoothPacketLogger][start] -- entering ****
-**** [IOBluetoothPacketLogger][start] -- exiting -- success ****
-
-**** [IOBluetoothSerialManager][start] -- entering ****
-**** [IOBluetoothSerialManager][start] -- exiting -- success ****
-GTrace synchronization point 1
-com_apple_filesystems_nfs: successfully loaded NFS module
-Couldn't alloc class "AppleKeyStoreTest"
-shared_region: 0x672fbb51e6bd267 [265(com.apple.Driver)] check_np(0x7ff7b0905a58) vm_shared_region_start_address() failed
-shared_region: 0x672fbb51e6bd267 [265(com.apple.Driver)] check_np(0x7ff7b0904eb8) vm_shared_region_start_address() failed
-AMFI: '/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64h' is adhoc signed.
-shared_region: 0x672fbb51e6bd267 [265(com.apple.Driver)]: vnode_lookup(/System/DriverKit/System/Library/dyld/) failed (error=2)
-GTrace synchronization point 3
-IOPPF - Found another boot volume.
-IOPPF - Found another boot volume.
-[AGPM][INFO ][CONTROLLER  ][start                   ] Entered AGPMController::start() 
-[AGPM][INFO ][CONTROLLER  ][start                   ] init fSlotControl, fSlotControl = 0
-[AGPM][INFO ][CONTROLLER  ][createAGPMClass         ] machines_dict->getObject(modelName iMac19,1)
-[AGPM][INFO ][CONTROLLER  ][createAGPMClass         ] gpuDict GFX0
-[AGPM][INFO ][CONTROLLER  ][createAGPMClass         ] build gpuDict by GPU GFX0.
-[AGPM][INFO ][CONTROLLER  ][start                   ] fIsExternalGPU 0
-X86PlatformPlugin::cgRegisterCallbackHandler - entered, type gpu-external-plimit-notification, target AGPM
-X86PlatformPlugin::cgRegisterCallbackHandler - entered, type gpu-external-plimit-notification, target AGPM
-X86PlatformPlugin::cgRegisterPLimitCallbackHandler - There are 0 entries in the linked list before target name AGPM
-X86PlatformPlugin::cgRegisterPLimitCallbackHandler - There are 0 entries in the linked list before target name AGPM
-Couldn't alloc class "AppleKeyStoreTest"
-Couldn't alloc class "AppleKeyStoreTest"
-HE2N_Key Does Not Exist, use kSMCPStatesEGPU for External GPU
-HE2N_Key Does Not Exist, use kSMCPStatesEGPU for External GPU
-Failed to send SMC number of eGPU P states (16) due to 0x82!
-Failed to send SMC number of eGPU P states (16) due to 0x82!
-[AGPM][INFO ][CONTROLLER  ][start                   ] GPU = GFX0 Initialized, Control ID 17
-[AGPM][INFO ][CONTROLLER  ][start                   ] Exited AGPMController::start()
-DK: IOUserDockChannelSerial-0x100000305::start(IOUserResources-0x100000116) ok
-ACMTRM-S: _saveAll: pushing *policy* -> daemon (gen=1 dataLen=53 ver=11).
-ACMTRM-S: _saveAll: pushing *analytics* -> daemon (gen=1 dataLen=400 ver=1).
-DK: AppleUserUSBHostHIDDevice-0x10000030f::start(IOUSBHostInterface-0x100000277) ok
-HID: Legacy shim 2
-open by AppleUserHIDEventDriver 0x10000031f (0x0)
-DK: AppleUserHIDEventDriver-0x10000031f::start(IOHIDInterface-0x100000255) ok
-Driver com.apple.AppleUserHIDDrivers has crashed 0 time(s)
-DK: AppleUserHIDEventDriver-0x10000036d using existing server IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x10000030f)-0x100000355
-HID: Legacy shim 2
-open by AppleUserHIDEventDriver 0x10000036d (0x0)
-DK: AppleUserHIDEventDriver-0x10000036d::start(IOHIDInterface-0x10000036a) ok
-Couldn't build index for com.apple.hfs: Not eligible for acceleration
-AppleKeyStore:8084:137: unexpected session: 100000 uid: -1 requested by: bluetoothd (137)
-AppleKeyStore:12143:137: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-Couldn't build index for com.apple.fsck_hfs: Not eligible for acceleration
-Couldn't build index for com.ap**p*l*e .m[oIuOBnltu_emtsdooost: hNHotC IeUlsiegriCblliee nfto]r[ SaectcBeTlReBrOaftfioWnL]
- -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-Couldn't build index for com.apple.mount_hfs: Not eligible for acceleration
-hfs: mounted macOS Base System on device disk1s1
-IOConsoleUsers: time(0) 0->0, lin 0, llk 1, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-AppleKeyStore:8084:137: unexpected session: 100000 uid: -1 requested by: bluetoothd (137)
-AppleKeyStore:12143:137: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-AppleKeyStore:12143:137: operation failed (sel: 7 ret: e00002bc, -1, 100000)
-kGPETDriasacbleeS sycrenenc -h1r
-onization point 9
-kPEDisableScreen -1
-kPEEnableScreen -1
-Couldn't alloc class "AppleKeyStoreTest"
-IOPresentment_Date: 08/10/2026, 16:08
-IOP: 0xeeee106b:0x00000400
-kPEDisableScreen -1
-kPEEnableScreen -1
-IOConsoleUsers: time(0) 0->0, lin 0, llk 0, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-Couldn't build index for com.apple.sysmond: Not eligible for acceleration
-reims-vgpu-window: first guest frame presented via rail resident (same-device zero-copy)
-IOConsoleUsers: time(0) 0->0, lin 0, llk 0, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-Couldn't build index for com.apple.ViewBridgeAuxiliary: Not eligible for acceleration
-apfs_mount:28769: disk3s4 EALREADY; rooted from snap, apfs <ptr>
-apfs_log_mount_unmount:2039: disk3s4 mounting volume Macintosh HD, requested by: mount_apfs (pid 303); parent: com.apple.Mobile (pid 264)
-authapfs_seal_break:501: disk3s4 integrity protection will be disabled (from xid: 2812)
-apfs_mount_livefs:28468: disk3 mount no firmlinks
-handle_mount:765: disk3s4 vol-uuid: 9210929F-5683-4B3E-8385-A273C29343CC block size: 4096 block count: 31406070 (unencrypted; flags: 0x201; features: 21.0.12)
-handle_mount:778: disk3s4 setting dev block size to 4096 from 512
-nx_global_extent_manipulation_lock:5457: disk3 nx_global_extent_manipulation_lock(0, 1), (0, 0, 0, 0)
-nx_global_extent_manipulation_lock:5527: disk3 Shared global_extent_manipulation lock taken after 0 attempts
-handle_revert_to_snapshot:6166: disk3s4 On next mount, volume will revert to snapshot 'com.apple.os.update-74E05D9EE66173C522D76DF0C98A5B74A648965D5E82C6C7FF1AFB3E584375C2' w/snap xid 302
-nx_global_extent_manipulation_unlock:5552: disk3 nx_global_extent_manipulation_unlock(0, 1), (0, 0, 1, 1)
-AppleCredentialManagerUserClient: start: session_uid = ffffffff.
-ACMFirstResponderKernelService: _onGetCapabilities: T208: NO.
-apfs_stop_bg_work:831: disk3s4 Volume Macintosh HD is unmounting, stop any bg work
-apfs_log_mount_unmount:2039: disk3s4 unmounting volume Macintosh HD, requested by: com.apple.MobileSoftwareUpdate. (pid 264); parent: launchd (pid 1)
-apfs_vfsop_unmount:2989: disk3s4 waiting for purgatory cleaner to finish
-authapfs_seal_restore:597: disk3s4 integrity protection will be re-enabled
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 5
-apfs: total mem allocated: 45044369 (43 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 5)
-apfs_mount:28769: disk3s4 EALREADY; rooted from snap, apfs <ptr>
-apfs_log_mount_unmount:2039: disk3s4 mounting volume Macintosh HD, requested by: mount_apfs (pid 309); parent: com.apple.Mobile (pid 264)
-authapfs_seal_break:501: disk3s4 integrity protection will be disabled (from xid: 2818)
-tx_flush:1241: disk3 xid 2818 tx stats: # 20 finish 18 enter 371 wait 2 6858us close 18us flush 3239us
-apfs_mount_livefs:28468: disk3 mount no firmlinks
-revert_to_snapshot:1618: disk3s4 Reverting to snapshot w/xid 302 and old sblock oid 562293.
-revert_extents_to_snapshot:1435: disk3s4 free'ing extents in main extentref tree 449141
-free_allocated_snapshot_extents:1350: disk3s4 processed 0 extents and free'd 0 blocks
-supplemental_tree_revert:305: disk3s4 reverted supplemental tree (type 5): 449145 -> 448833
-omap_cleanup:1464: disk3s4 started cleaning snapshots 2819-2819
-omap_cleanup:1685: disk3s4 completed cleaning snapshot 2819, om_snap_count 1 om_most_recent_snap 2819
-obj_cache_remove_reverted_fs_objects:1596: disk3s4 removing reverted fs objects for fs 1397: 303 - 2819
-revert_to_snapshot:1713: disk3s4 DONE reverting to snapshot w/xid 302
-authapfs_seal_break:501: disk3s4 integrity protection will be disabled (from xid: 2820)
-handle_mount:765: disk3s4 vol-uuid: 9210929F-5683-4B3E-8385-A273C29343CC block size: 4096 block count: 31406070 (unencrypted; flags: 0x201; features: 21.0.12)
-handle_mount:778: disk3s4 setting dev block size to 4096 from 512
-AppleUSBEHCIPort@fd200000: AppleUSBHostPort::disconnect: persistent enumeration failures
-apfs_log_mount_unmount:2039: disk3s4 unmounting volume Macintosh HD, requested by: com.apple.MobileSoftwareUpdate. (pid 264); parent: launchd (pid 1)
-apfs_vfsop_unmount:2989: disk3s4 waiting for purgatory cleaner to finish
-authapfs_seal_restore:597: disk3s4 integrity protection will be re-enabled
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 5
-apfs: total mem allocated: 59713003 (57 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 5)
-AppleCredentialManagerUserClient: start: session_uid = ffffffff.
-ACMFirstResponderKernelService: _onGetCapabilities: T208: NO.
-ACM: createCredentialSet: Credential set created, CS[100]/2, mem=265(0).
-ACM: createCredentialSet: Credential set created, CS[101]/3, mem=377(0).
-Couldn't build index for com.apple.UserSelector: Not eligible for acceleration
-AppleKeyStore:3467:115: user a60055f767b44fb181c3188f268a151c unlock failed (-5)
-AppleKeyStore:12143:115: operation failed (sel: 75 ret: e00002ce, -1, 100000)
-AppleKeyStore:12143:312: operation failed (sel: 17 ret: e00002f0, -1, 100000)
-AppleKeyStore:3467:115: user a60055f767b44fb181c3188f268a151c unlock failed (-5)
-AppleKeyStore:12143:115: operation failed (sel: 75 ret: e00002ce, -1, 100000)
-AppleKeyStore:12143:312: operation failed (sel: 17 ret: e00002f0, -1, 100000)
-AppleKeyStore:8084:316: unexpected session: 100003 uid: -1 requested by: ctkd (316)
-AppleKeyStore:12143:316: operation failed (sel: 17 ret: e00002c2, -1, 100003)
-ACM: deleteCredentialSet: Deleting credential set, CS[100].
-ACM: deleteCredentialSet: Deleting credential set, CS[101].
-IOConsoleUsers: time(0) 0->0, lin 0, llk 0, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-Couldn't build index for com.apple.activateSettings: Not eligible for acceleration
-ACM: createCredentialSet: Credential set created, CS[102]/2, mem=833(0).
-AppleKeyStore:12143:312: operation failed (sel: 17 ret: e00002f0, -1, 100000)
-ACM: deleteCredentialSet: Deleting credential set, CS[102].
-IOSurfaceRootUserClient::set_gpu_policy_dict prop: 0xffffff99678a85b8
-IOConsoleUsers: time(0) 0->0, lin 0, llk 0, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-AppleKeyStore:1918:115: vol-uuid: , portable: 0, res: 0xfffffffd
-AppleKeyStore:3467:115: user a60055f767b44fb181c3188f268a151c unlock successful (0)
-AppleKeyStore:12143:322: operation failed (sel: 42 ret: e00002bc, -1, 100003)
-ACMTRM: _disableBy: [TRM ENABLED=NO] (mask=8, DISABLED BY: Def=NO BtArg=NO HW=YES DevT=NO OSEnv=NO ExBt=NO | MgCo=NO* DwOS=NO ChBd=NO GSw=NO CPro=NO BSys=NO MBud=NO SmCrd=NO ApSet=NO).
-ACM: createCredentialSet: Credential set created, CS[103]/2, mem=1141(0).
-AppleKeyStore:12143:312: operation failed (sel: 17 ret: e00002f0, -1, 100000)
-IOConsoleUsers: time(0) 0->0, lin 0, llk 0, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-IOConsoleUsers: time(0) 0->0, lin 1, llk 0, 
-ACM: deleteCredentialSet: Deleting credential set, CS[103].
-IOConsoleUsers: gIOScreenLockState 1, hs 0, bs 0, now 0, sm 0x0
-ACMTRM-A: stopSegment: segDeviceLockState_Locked: count=12 totalDuration=35128 (origStartTime=1791468490 lastDuration=13).
-Couldn't alloc class "AppleKeyStoreTest"
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: resumeSegment: segDeviceLockState_Unlocked: count=12 totalDuration=40245 startTime=1791468503.
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _publish: _onDeviceLockStateChanged UNLOCKED(0) reason=0 en=NO pro=2/2 pasThr=NO kb=0 con=0 poRsn=0 smExp=NO gpBlk=NO miss=NO seen=1791468503 now=1791468503(-5) | PMT=0/0 GPT=0/0/(0) UPT=0/0.
-ACMTRM: _mapAndPublishTRM: set TRM_DeviceLocked = False.
-ACMTRM: _mapAndPublishTRM: set TRM_UnlockedPeriod = True.
-ACMTRM: _mapAndPublishTRM: sending kIOMessageServicePropertyChange(#changes=2) while UNLOCKED(0), TRM: 604800/U(0) 259200/-(255) M=0/5/0 AFNA(2)/AFNA(2) L=0 BS=0 R=0 UP=86400/1, CUR: U(0) X(0).
-ACMTRM: _logPolicy: SAVING: ver=11 smTm=0 poRsn=0 gpTm=0 smExp=NO gpBlk=NO suTm=1791468503 svTm=1791468503 gpRsn=0 cMs=NO upTm=0 disBy=8.
-ACMTRM-S: setData: saving *policy* (dataLen=53) in 3 seconds (fullSync: NO -> NO).
-AppleKeyStore:8573:330: set handle 1 as special bag -501
-AppleKeyStore:8710:330: Device UnLock call(-501): lockstate=1, transientCnt=0
-AppleKeyStore:7300:330: group unlock: 0
-AppleKeyStore:946:330: Sending lock change 0 for handle -501 value 1
-AppleKeyStore:8790:330: Device UnLocked(-501): lockstate=0
-AppleKeyStore:8084:77: unexpected session: 100000 uid: -1 requested by: UserEventAgent (77)
-AppleKeyStore:12143:77: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-AppleKeyStore:8084:137: unexpected session: 100000 uid: -1 requested by: bluetoothd (137)
-AppleKeyStore:12143:137: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-AppleKeyStore:8710:146: Device UnLock call(-501): lockstate=0, transientCnt=0
-AppleKeyStore:8790:146: Device UnLocked(-501): lockstate=0
-AppleKeyStore:8084:191: unexpected session: 100000 uid: -1 requested by: containermanagerd (191)
-AppleKeyStore:12143:191: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-AppleKeyStore:12143:231: operation failed (sel: 17 ret: e00002f0, 205, 100008)
-Couldn't build index for com.apple.pboard: Not eligible for acceleration
-Couldn't build index for com.apple.pbs: Not eligible for acceleration
-AppleCredentialManagerUserClient: start: session_uid = 1f5.
-ACMFirstResponderKernelService: _onGetCapabilities: T208: NO.
-ACM: createCredentialSet: Credential set created, CS[104]/2, mem=1425(0).
-ACM: handleExists: Checking handle, CS[104].
-ACM: handleExists: Checking handle, CS[104].
-ifnet_attach: Waiting for all kernel threads created for interface utun0 to get scheduled at least once.
-ifnet_attach: All kernel threads created for interface utun0 have been scheduled at least once. Proceeding.
-_dlil_attach_flowswitch_nexus: not attaching flowswitch to utun0
-ACMTRM-S: _saveAll: pushing *policy* -> daemon (gen=2 dataLen=53 ver=11).
-ACMTRM-S: _saveAll: pushing *analytics* -> daemon (gen=2 dataLen=400 ver=1).
-AppleKeyStore:8104:434: invalid handle -501 (_device_keybag_access: 0)
-AppleKeyStore:12143:434: operation failed (sel: 17 ret: e00002c2, 501, 100003)
-ifnet_attach: Waiting for all kernel threads created for interface utun1 to get scheduled at least once.
-ifnet_attach: All kernel threads created for interface utun1 have been scheduled at least once. Proceeding.
-_dlil_attach_flowswitch_nexus: not attaching flowswitch to utun1
-ifnet_attach: Waiting for all kernel threads created for interface utun2 to get scheduled at least once.
-ifnet_attach: All kernel threads created for interface utun2 have been scheduled at least once. Proceeding.
-_dlil_attach_flowswitch_nexus: not attaching flowswitch to utun2
-IOUC RootDomainUserClient failed MACF in process pid 451, studentd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC RootDomainUserClient failed MACF in process pid 453, StatusKitAgent
-Couldn't build index for com.apple.SafeEjectGPUService: Not eligible for acceleration
-Couldn't build index for com.apple.AOSHeartbeat: Not eligible for acceleration
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 420, parsecd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 472, assistantd
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC RootDomainUserClient failed MACF in process pid 361, siriactionsd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC RootDomainUserClient failed MACF in process pid 407, knowledge-agent
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:486: unexpected session: 100000 uid: -1 requested by: nearbyd (486)
-AppleKeyStore:12143:486: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-AppleKeyStore:8084:486: unexpected session: 100000 uid: -1 requested by: nearbyd (486)
-AppleKeyStore:12143:486: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:429: unexpected session: 100027 uid: -1 requested by: com.apple.siri.embeddedspeech (429)
-AppleKeyStore:12143:429: operation failed (sel: 7 ret: e00002c2, -1, 100027)
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:429: unexpected session: 100027 uid: -1 requested by: com.apple.siri.embeddedspeech (429)
-AppleKeyStore:12143:429: operation failed (sel: 7 ret: e00002c2, -1, 100027)
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-Couldn't build index for com.apple.audio.ComponentTagHelper: Not eligible for acceleration
-com.apple.xpc.launchd|2026-10-08 16:08:27.161413 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [497]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-ACM: deleteCredentialSet: Deleting credential set, CS[104].
-tx_flush:1241: disk3 xid 2838 tx stats: # 40 finish 37 enter 448 wait 3 5061us close 2237us flush 4412us
-AppleSSE::hasBridgeSSE - SSE not present (neither KR nor SEPMgr)
-com.apple.xpc.launchd|2026-10-08 16:08:32.272078 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [516]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-[AGPM][ERROR][BOOST       ][setBoost                ] 0 fGPUIdleIntervalMS = 0, ControlID = 17
-Couldn't build index for com.apple.AssetCacheLocatorService: Not eligible for acceleration
-tx_flush:1241: disk3 xid 2858 tx stats: # 60 finish 57 enter 353 wait 3 5061us close 1491us flush 4095us
-[AGPM][ERROR][BOOST       ][setBoost                ] 0 fGPUIdleIntervalMS = 0, ControlID = 17
-AppleKeyStore:8084:522: unexpected session: 100000 uid: -1 requested by: bluetoothd (522)
-AppleKeyStore:12143:522: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:522: unexpected session: 100000 uid: -1 requested by: bluetoothd (522)
-AppleKeyStore:12143:522: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:08:42.357960 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [524]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-Couldn't build index for com.apple.accessibility.mediaaccessibilityd: Not eligible for acceleration
-ACM: createCredentialSet: Credential set created, CS[105]/2, mem=1537(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[105].
-tx_flush:1241: disk3 xid 2878 tx stats: # 80 finish 83 enter 291 wait 3 5061us close 1118us flush 3790us
-com.apple.xpc.launchd|2026-10-08 16:08:57.433241 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [562]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-tx_flush:1241: disk3 xid 2898 tx stats: # 100 finish 103 enter 242 wait 6 2820us close 894us flush 3408us
-tx_flush:1241: disk3 xid 2918 tx stats: # 120 finish 123 enter 205 wait 6 2820us close 745us flush 3181us
-com.apple.xpc.launchd|2026-10-08 16:09:02.543528 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [572]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:581: unexpected session: 100000 uid: -1 requested by: bluetoothd (581)
-AppleKeyStore:12143:581: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:09:12.608553 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [582]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:581: unexpected session: 100000 uid: -1 requested by: bluetoothd (581)
-AppleKeyStore:12143:581: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-tx_flush:1241: disk3 xid 2938 tx stats: # 140 finish 143 enter 189 wait 6 2820us close 639us flush 3142us
-tx_flush:1241: disk3 xid 2958 tx stats: # 160 finish 163 enter 168 wait 6 2820us close 559us flush 2931us
-tx_flush:1241: disk3 xid 2978 tx stats: # 180 finish 183 enter 155 wait 6 2820us close 497us flush 2796us
-AppleKeyStore:12155:0: AppleKeyStoreUserClient: Assertion timer fired
-AppleKeyStore:8084:604: unexpected session: 100000 uid: -1 requested by: bluetoothd (604)
-AppleKeyStore:12143:604: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:604: unexpected session: 100000 uid: -1 requested by: bluetoothd (604)
-AppleKeyStore:12143:604: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-tx_flush:1241: disk3 xid 2998 tx stats: # 200 finish 203 enter 144 wait 6 2820us close 447us flush 3282us
-AppleKeyStore:8084:606: unexpected session: 100000 uid: -1 requested by: bluetoothd (606)
-AppleKeyStore:12143:606: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:606: unexpected session: 100000 uid: -1 requested by: bluetoothd (606)
-AppleKeyStore:12143:606: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-Invalid denylist
-IOUC IOAccelDevice2 failed MACF in process pid 613, nsattributedstri
-IOUC IOAccelDevice2 failed MACF in process pid 619, nsattributedstri
-usb_desc_get_descriptor: 1 unknown type 33 (len 10)
-Couldn't build index for com.apple.DistributionKit.DistributionHelper: Not eligible for acceleration
-tx_flush:1241: disk3 xid 3018 tx stats: # 220 finish 223 enter 145 wait 6 2820us close 406us flush 3444us
-AppleKeyStore:8084:638: unexpected session: 100000 uid: -1 requested by: bluetoothd (638)
-AppleKeyStore:12143:638: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:638: unexpected session: 100000 uid: -1 requested by: bluetoothd (638)
-AppleKeyStore:12143:638: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-Couldn't build index for com.apple.quicklook.satellite: Not eligible for acceleration
-Couldn't build index for com.apple.mdbulkimport: Not eligible for acceleration
-Couldn't build index for com.apple.mdbulkimport: Not eligible for acceleration
-com.apple.xpc.launchd|2026-10-08 16:11:05.663386 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [654]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:11:10.772955 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [656]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:661: unexpected session: 100000 uid: -1 requested by: bluetoothd (661)
-AppleKeyStore:12143:661: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:661: unexpected session: 100000 uid: -1 requested by: bluetoothd (661)
-AppleKeyStore:12143:661: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:11:20.863993 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [665]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-ACM: createCredentialSet: Credential set created, CS[106]/2, mem=1845(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[106].
-ACM: createCredentialSet: Credential set created, CS[107]/2, mem=2153(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[107].
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-tx_flush:1241: disk3 xid 3038 tx stats: # 240 finish 243 enter 187 wait 6 2820us close 372us flush 4701us
-com.apple.xpc.launchd|2026-10-08 16:11:35.966010 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [672]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-Couldn't build index for com.apple.defaults: Not eligible for acceleration
-com.apple.xpc.launchd|2026-10-08 16:11:40.989806 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [685]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:686: unexpected session: 100000 uid: -1 requested by: bluetoothd (686)
-AppleKeyStore:12143:686: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:686: unexpected session: 100000 uid: -1 requested by: bluetoothd (686)
-AppleKeyStore:12143:686: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:11:51.070517 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [688]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:12:06.197258 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [691]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:12:11.231449 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [694]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:12:21.256273 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [697]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:698: unexpected session: 100000 uid: -1 requested by: bluetoothd (698)
-AppleKeyStore:12143:698: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:698: unexpected session: 100000 uid: -1 requested by: bluetoothd (698)
-AppleKeyStore:12143:698: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-tx_flush:1241: disk3 xid 3058 tx stats: # 260 finish 263 enter 266 wait 6 2820us close 344us flush 5035us
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-AppleKeyStore:8084:473: unexpected session: 100029 uid: -1 requested by: com.apple.siri.embeddedspeech (473)
-AppleKeyStore:12143:473: operation failed (sel: 7 ret: e00002c2, -1, 100029)
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-IOUC AppleKeyStoreUserClient failed MACF in process pid 456, triald
-com.apple.xpc.launchd|2026-10-08 16:12:36.377615 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [702]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:12:41.490888 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [704]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:12:51.547955 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [705]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:706: unexpected session: 100000 uid: -1 requested by: bluetoothd (706)
-AppleKeyStore:12143:706: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:706: unexpected session: 100000 uid: -1 requested by: bluetoothd (706)
-AppleKeyStore:12143:706: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:13:06.724391 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [709]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-apfs_load_inode_internal:6553: disk3s1 *** reset ino 18555 size back to 34048 (from 38707)
-apfs_load_inode_internal:6553: disk3s1 *** reset ino 18557 size back to 32091 (from 32873)
-com.apple.xpc.launchd|2026-10-08 16:13:11.833036 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [714]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:13:21.950446 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [715]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:720: unexpected session: 100000 uid: -1 requested by: bluetoothd (720)
-AppleKeyStore:12143:720: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:720: unexpected session: 100000 uid: -1 requested by: bluetoothd (720)
-AppleKeyStore:12143:720: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:13:37.070012 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [728]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:13:42.116222 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [730]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:13:52.131667 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [732]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:734: unexpected session: 100000 uid: -1 requested by: bluetoothd (734)
-AppleKeyStore:12143:734: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:734: unexpected session: 100000 uid: -1 requested by: bluetoothd (734)
-AppleKeyStore:12143:734: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:14:07.215362 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [737]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:14:12.323019 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [739]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-tx_flush:1241: disk3 xid 3078 tx stats: # 280 finish 283 enter 382 wait 6 2820us close 319us flush 5953us
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-ACM: createCredentialSet: Credential set created, CS[108]/2, mem=2461(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[108].
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-com.apple.xpc.launchd|2026-10-08 16:14:22.397226 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [741]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-IOUC AppleKeyStoreUserClient failed MACF in process pid 484, amsengagementd
-tx_flush:1241: disk3 xid 3098 tx stats: # 300 finish 303 enter 372 wait 6 2820us close 298us flush 5824us
-AppleKeyStore:8084:743: unexpected session: 100000 uid: -1 requested by: bluetoothd (743)
-AppleKeyStore:12143:743: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:743: unexpected session: 100000 uid: -1 requested by: bluetoothd (743)
-AppleKeyStore:12143:743: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:14:37.432231 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [745]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:14:42.470526 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [751]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:14:52.590461 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [752]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:753: unexpected session: 100000 uid: -1 requested by: bluetoothd (753)
-AppleKeyStore:12143:753: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:753: unexpected session: 100000 uid: -1 requested by: bluetoothd (753)
-AppleKeyStore:12143:753: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:15:07.669763 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [756]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:15:12.717597 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [758]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:15:22.820510 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [767]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:771: unexpected session: 100000 uid: -1 requested by: bluetoothd (771)
-AppleKeyStore:12143:771: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:771: unexpected session: 100000 uid: -1 requested by: bluetoothd (771)
-AppleKeyStore:12143:771: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:15:37.874818 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [773]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:15:42.985427 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [776]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-tx_flush:1241: disk3 xid 3118 tx stats: # 320 finish 323 enter 372 wait 6 2820us close 279us flush 5928us
-com.apple.xpc.launchd|2026-10-08 16:15:53.022665 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [791]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:821: unexpected session: 100000 uid: -1 requested by: bluetoothd (821)
-AppleKeyStore:12143:821: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:821: unexpected session: 100000 uid: -1 requested by: bluetoothd (821)
-AppleKeyStore:12143:821: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:16:10.315140 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [844]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:16:15.391057 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [849]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:16:25.457906 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [892]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-tx_flush:1241: disk3 xid 3138 tx stats: # 340 finish 343 enter 906 wait 7 2516us close 263us flush 6227us
-ACM: createCredentialSet: Credential set created, CS[109]/2, mem=2769(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[109].
-Couldn't build index for com.apple.deleted_helper: Not eligible for acceleration
-AppleKeyStore:8084:940: unexpected session: 100000 uid: -1 requested by: bluetoothd (940)
-AppleKeyStore:12143:940: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:940: unexpected session: 100000 uid: -1 requested by: bluetoothd (940)
-AppleKeyStore:12143:940: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-IOConsoleUsers: time(0) 0->0, lin 1, llk 0, 
-IOConsoleUsers: gIOScreenLockState 1, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-com.apple.xpc.launchd|2026-10-08 16:16:40.584892 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1007]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-IOConsoleUsers: time(0) 0->0, lin 1, llk 0, 
-IOConsoleUsers: gIOScreenLockState 1, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-AppleKeyStore:1918:115: vol-uuid: , portable: 0, res: 0xfffffffd
-AppleKeyStore:3467:115: user a60055f767b44fb181c3188f268a151c unlock successful (0)
-ACM: createCredentialSet: Credential set created, CS[110]/2, mem=3093(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[110].
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-Couldn't build index for com.apple.dt.CommandLineTools.installondemand: Not eligible for acceleration
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-com.apple.xpc.launchd|2026-10-08 16:16:45.709243 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1019]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:16:55.819491 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1026]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-AppleKeyStore:8084:1032: unexpected session: 100000 uid: -1 requested by: bluetoothd (1032)
-AppleKeyStore:12143:1032: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:1032: unexpected session: 100000 uid: -1 requested by: bluetoothd (1032)
-AppleKeyStore:12143:1032: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-com.apple.xpc.launchd|2026-10-08 16:17:11.027152 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1036]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-com.apple.xpc.launchd|2026-10-08 16:17:16.107251 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1038]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-ACM: createCredentialSet: Credential set created, CS[111]/2, mem=3401(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[111].
-Couldn't build index for com.apple.ditto: Not eligible for acceleration
-com.apple.xpc.launchd|2026-10-08 16:17:26.124681 (pid/397/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64 [1053]) <Error>: Missing executable detected. Job: 'com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64' Executable: '/System/Library/PrivateFrameworks/MacinTalk.framework/Versions/A/PlugIns/WardaSynthesizer_arm64.appex/Contents/MacOS/WardaSynthesizer_arm64'
-ACM: createCredentialSet: Credential set created, CS[112]/2, mem=3709(0).
-ACM: deleteCredentialSet: Deleting credential set, CS[112].
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-proc_pidpathinfo_internal : EACCES returned by vnode_lookup for uid 88
-Couldn't build index for com.apple.PackageUIKit.Install-in-Progress: Not eligible for acceleration
-LINK: [GSIA] enable failed
-LINK: [GSIB] no interrupt
-LINK: [GSIB] enable failed
-LINK: [GSIA] enable failed
-AppleKeyStore:8084:1060: unexpected session: 100000 uid: -1 requested by: bluetoothd (1060)
-AppleKeyStore:12143:1060: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-**** [IOBluetoothHCIUserClient][SetBTRBOffWL] -- mBluetoothFamily->mACPIMethods->SetBTRB (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTLPOffWL] -- mBluetoothFamily->mACPIMethods->SetBTLP (OFF) returned 0xE00002C7 error
-**** [IOBluetoothHCIUserClient][SetBTRSWL] -- mBluetoothFamily->mACPIMethods->SetBTRS() returned 0xE00002C7 error
-AppleKeyStore:8084:1060: unexpected session: 100000 uid: -1 requested by: bluetoothd (1060)
-AppleKeyStore:12143:1060: operation failed (sel: 7 ret: e00002c2, -1, 100000)
-tx_flush:1241: disk3 xid 3158 tx stats: # 360 finish 363 enter 974 wait 8 2214us close 248us flush 6353us
-compressor_store_stop_compaction = TRUE
-AppleKeyStore:946:146: Sending lock change 1 for handle -501 value 0
-AppleKeyStore:8084:77: unexpected session: 100000 uid: -1 requested by: UserEventAgent (77)
-AppleKeyStore:12143:77: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-AppleKeyStore:12143:405: operation failed (sel: 35 ret: e00002f0, 501, 100003)
-AppleKeyStore:12143:386: operation failed (sel: 17 ret: e00002f0, 501, 100003)
-AppleKeyStore:12143:372: operation failed (sel: 17 ret: e00002f0, 501, 100023)
-AppleKeyStore:12143:441: operation failed (sel: 17 ret: e00002f0, 501, 100003)
-AppleKeyStore:12143:348: operation failed (sel: 7 ret: e00002bc, 501, 100023)
-AppleKeyStore:12143:348: operation failed (sel: 7 ret: e00002bc, 501, 100023)
-AppleKeyStore:12143:512: operation failed (sel: 17 ret: e00002f0, 501, 100003)
-AppleKeyStore:8104:434: invalid handle -501 (_device_keybag_access: 0)
-AppleKeyStore:12143:434: operation failed (sel: 17 ret: e00002c2, 501, 100003)
-AppleKeyStore:12143:355: operation failed (sel: 7 ret: e00002bc, 501, 100003)
-AppleKeyStore:12143:355: operation failed (sel: 7 ret: e00002bc, 501, 100003)
-AppleKeyStore:12143:355: operation failed (sel: 7 ret: e00002bc, 501, 100003)
-AppleKeyStore:12143:231: operation failed (sel: 17 ret: e00002f0, 205, 100008)
-AppleKeyStore:8084:191: unexpected session: 100000 uid: -1 requested by: containermanagerd (191)
-AppleKeyStore:12143:191: operation failed (sel: 17 ret: e00002c2, -1, 100000)
-AppleKeyStore:3467:115: user a60055f767b44fb181c3188f268a151c unlock failed (-5)
-AppleKeyStore:12143:115: operation failed (sel: 75 ret: e00002ce, -1, 100000)
-Kext loading now disabled.
-Kext unloading now disabled.
-Kext autounloading now disabled.
-com.apple.xpc.launchd|2026-10-08 16:17:40.808928 (system) <Notice>: System shutdown initiated by: shutdown[1064]<-sessionlogoutd[1063]
-[System Event] [585529580287] [INFO] [Subsystem: launchd] [Event: system] System shutdown initiated by: shutdown[1064]<-sessionlogoutd[1063]
-Kernel requests now disabled.
-ASP: System is shutting down, preventing further ASP upcalls
-ASP: ASP: shutting down, drained
-apfs_stop_bg_work:822: System is shutting down stop any bg work
-build_signal_reason: unable to allocate signal reason buffer.
-build_signal_reason: unable to allocate signal reason buffer.
-build_signal_reason: unable to allocate signal reason buffer.
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /System/Library/Extensions/IOGraphicsFamily.kext/iogdiagnose
-  IOTimeSyncTimeSyncTimePort(0x525400c918270008): Removing general notifier <ptr> for local clock port <ptr> stop
-IOConsoleUsers: time(0) 0->0, lin 0, llk 1, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-ACMTRM-A: stopSegment: segDeviceLockState_Unlocked: count=12 totalDuration=40807 (origStartTime=1791468503 lastDuration=562).
-Couldn't alloc class "AppleKeyStoreTest"
-IOConsoleUsers: time(0) 0->0, lin 0, llk 1, 
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
-Couldn't alloc class "AppleKeyStoreTest"
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM-A: resumeSegment: segDeviceLockState_Locked: count=13 totalDuration=35128 startTime=1791469065.
-ACMTRM-S: setData: saving *analytics* (dataLen=400) in 3 seconds (fullSync: NO -> NO).
-ACMTRM: _publish: _onDeviceLockStateChanged LOCKED(1) reason=0 en=NO pro=2/2 pasThr=NO kb=0 con=0 poRsn=0 smExp=NO gpBlk=NO miss=NO seen=0 now=1791469065(-5) | PMT=0/0 GPT=0/0/(0) UPT=86400/1791555465.
-ACMTRM: _mapAndPublishTRM: set TRM_DeviceLocked = True.
-ACMTRM: _mapAndPublishTRM: sending kIOMessageServicePropertyChange(#changes=1) while LOCKED(1), TRM: 604800/U(0) 259200/-(255) M=0/5/0 AFNA(2)/AFNA(2) L=1 BS=0 R=0 UP=86400/1, CUR: U(0) X(0).
-ACMTRM: _logPolicy: SAVING: ver=11 smTm=0 poRsn=0 gpTm=0 smExp=NO gpBlk=NO suTm=0 svTm=1791469065 gpRsn=0 cMs=NO upTm=1791469065 disBy=8.
-ACMTRM-S: setData: saving *policy* (dataLen=53) in 3 seconds (fullSync: NO -> NO).
-kPEDisableScreen -1
-com.apple.xpc.launchd|2026-10-08 16:17:40.813488 (shutdown) <Notice>: shutdown UNINITIALIZED -> COMMITTED
-[System Event] [585777489783] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown UNINITIALIZED -> COMMITTED
-com.apple.xpc.launchd|2026-10-08 16:17:40.814760 <Error>: pre-reboot: non-boot task posix_spawn() failed: 2: No such file or directory
-com.apple.xpc.launchd|2026-10-08 16:17:40.814844 (shutdown) <Notice>: shutdown COMMITTED -> COMMITTED
-[System Event] [585782972944] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown COMMITTED -> COMMITTED
-com.apple.xpc.launchd|2026-10-08 16:17:40.814844 (shutdown) <Notice>: shutdown COMMITTED -> WAITING_ON_SERVICES
-[System Event] [585784643124] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown COMMITTED -> WAITING_ON_SERVICES
-kPEEnableScreen -1
-com.apple.xpc.launchd|2026-10-08 16:17:42.815180 <Notice>: Generating shutdown stall report...
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-ACMTRM-S: _saveAll: pushing *policy* -> daemon (gen=3 dataLen=53 ver=11).
-ACMTRM-S: _saveAll: pushing *analytics* -> daemon (gen=3 dataLen=400 ver=1).
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/bin/heap
-com.apple.xpc.launchd|2026-10-08 16:17:45.838958 (shutdown) <Notice>: shutdown WAITING_ON_SERVICES -> WRITE_DISABLED
-[System Event] [590560842537] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown WAITING_ON_SERVICES -> WRITE_DISABLED
-com.apple.xpc.launchd|2026-10-08 16:17:45.838965 (shutdown) <Notice>: shutdown WRITE_DISABLED -> WAITING_ON_COALITIONS
-[System Event] [590563339996] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown WRITE_DISABLED -> WAITING_ON_COALITIONS
-com.apple.xpc.launchd|2026-10-08 16:17:45.838986 (shutdown) <Notice>: shutdown WAITING_ON_COALITIONS -> WAITING_ON_SHUTDOWN_STALL_REPORT
-[System Event] [590565087515] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown WAITING_ON_COALITIONS -> WAITING_ON_SHUTDOWN_STALL_REPORT
-Couldn't build index for com.apple.kextstat: Not eligible for acceleration
-ASP: System is shutting down, (SIP is DISABLED) allowing process at path: /usr/sbin/kextstat
-com.apple.xpc.launchd|2026-10-08 16:17:46.914844 <Notice>: Shutdown stall report generated in 4 seconds.
-com.apple.xpc.launchd|2026-10-08 16:17:46.914923 (shutdown) <Notice>: shutdown WAITING_ON_SHUTDOWN_STALL_REPORT -> LAUNCH_SHUTDOWN_TEARDOWN
-[System Event] [591636359652] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown WAITING_ON_SHUTDOWN_STALL_REPORT -> LAUNCH_SHUTDOWN_TEARDOWN
-com.apple.xpc.launchd|2026-10-08 16:17:46.914951 (shutdown_installer_tasks) <Notice>: Doing boot task
-[System Event] [591637983609] [INFO] [Subsystem: launchd] [Event: shutdown_installer_tasks] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:17:46.915668 (shutdown_installer_tasks) <Notice>: optional boot task not present
-[System Event] [591639454420] [INFO] [Subsystem: launchd] [Event: shutdown_installer_tasks] optional boot task not present
-com.apple.xpc.launchd|2026-10-08 16:17:46.915676 (deferred_install) <Notice>: Doing boot task
-[System Event] [591640854261] [INFO] [Subsystem: launchd] [Event: deferred_install] Doing boot task
-com.apple.xpc.launchd|2026-10-08 16:17:46.916765 (deferred_install) <Notice>: optional boot task not present
-[System Event] [591642223961] [INFO] [Subsystem: launchd] [Event: deferred_install] optional boot task not present
-com.apple.xpc.launchd|2026-10-08 16:17:46.916774 (system) <Notice>: Userspace teardown took: 6101 ms
-[System Event] [591643628399] [INFO] [Subsystem: launchd] [Event: system] Userspace teardown took: 6101 ms
-com.apple.xpc.launchd|2026-10-08 16:17:46.916775 (system) <Notice>: Will be calling reboot(2) with flags: 0x8
-[System Event] [591645032463] [INFO] [Subsystem: launchd] [Event: system] Will be calling reboot(2) with flags: 0x8
-com.apple.xpc.launchd|2026-10-08 16:17:46.916776 <Notice>: Quiescing queues
-[System Event] [591646281194] [INFO] [Subsystem: launchd] [Event: launchd] Quiescing queues
-com.apple.xpc.launchd|2026-10-08 16:17:46.916776 (shutdown) <Notice>: shutdown LAUNCH_SHUTDOWN_TEARDOWN -> WAITING_ON_QUIESCE
-[System Event] [591647688749] [INFO] [Subsystem: launchd] [Event: shutdown] shutdown LAUNCH_SHUTDOWN_TEARDOWN -> WAITING_ON_QUIESCE
-launchd quiesce complete
-IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0xe0000255
-GTrace synchronization point 62
-IOPlatformHaltRestartAction -> AppleSMC
-PMRD: PagingOff all drivers took 16 ms
-PMRD: PagingOff total 16 ms
-syncing disks... Killing all processes 
-
-vfs_unmountall(nonsystem) start
-unmount(1) /Volumes/QEMU VVFAT
-unmount(1) /Volumes/macOS Base System
-hfs: unmount initiated on macOS Base System on device disk1s1
-unmount(1) /System/Volumes/Data/home
-Unmount of /System/Volumes/Data/home failed (45)
-unmount(1) /System/Volumes/Data skipped
-unmount(1) /System/Volumes/Update skipped
-unmount(1) /System/Volumes/VM skipped
-unmount(1) /System/Volumes/Preboot skipped
-unmount(1) /dev skipped
-unmount(1) / skipped
-vfs_unmountall(nonsystem) end
-DK: IOUserServer(com.apple.IOUserDockChannelSerial-0x100000305)::systemHalt()
-DK: 1: terminate(IOUserDockChannelSerial-0x100000305)
-DK: IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x10000030f)::systemHalt()
-DK: 1: terminate(AppleUserHIDEventDriver-0x10000031f)
-DK: 1: terminate(AppleUserUSBHostHIDDevice-0x10000030f)
-close by AppleUserHIDEventDriver 0x10000031f (0x0)
-DK: 0: terminate(AppleUserHIDEventDriver-0x10000036d)
-DK: AppleUserHIDEventDriver-0x10000036d:force close (IOHIDInterface-0x10000036a)
-close by AppleUserHIDEventDriver 0x10000036d (0x0)
-DK: AppleUserHIDEventDriver-0x10000036d:force close (AppleUserUSBHostHIDDevice-0x10000030f)
-IOServicePH::systemHalt took 6 ms
-Killing all processes 
-
-continuing
-vfs_unmountall(system) start
-unmount(0) /System/Volumes/Data/home
-Unmount of /System/Volumes/Data/home failed (45)
-unmount(0) /System/Volumes/Data
-tx_flush:1241: disk3 xid 3178 tx stats: # 380 finish 380 enter 948 wait 10 2171us close 235us flush 6227us
-apfs_log_mount_unmount:2039: disk3s1 unmounting volume Macintosh HD - Data, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-apfs_vfsop_unmount:2989: disk3s1 waiting for purgatory cleaner to finish
-nx_volume_group_update:7978: disk3s1 Set volume (role 0x40) to 0 xid 0
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 4
-apfs: total mem allocated: 57247158 (54 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 4)
-unmount(0) /System/Volumes/Update
-apfs_log_mount_unmount:2039: disk3s5 unmounting volume Update, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-apfs_vfsop_unmount:2989: disk3s5 waiting for purgatory cleaner to finish
-nx_volume_group_update:7897: disk3s5 Volume Update role c0 Not a System or data volume
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 3
-apfs: total mem allocated: 57235686 (54 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 3)
-unmount(0) /System/Volumes/VM
-kern_close_file_for_direct_io(<ptr>)
-vnode_close(0)
-apfs_log_mount_unmount:2039: disk3s6 unmounting volume VM, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-apfs_vfsop_unmount:2989: disk3s6 waiting for purgatory cleaner to finish
-nx_volume_group_update:7897: disk3s6 Volume VM role 8 Not a System or data volume
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 2
-apfs: total mem allocated: 57237686 (54 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 2)
-unmount(0) /System/Volumes/Preboot
-apfs_log_mount_unmount:2039: disk3s2 unmounting volume Preboot, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-nx_volume_group_update:7897: os.dmgs1 Volume RomeSecurityGlowG22H730.x86_64SystemCryptex role 0 Not a System or data volume
-nx_volume_group_update:7897: app.dmgs1 Volume AppCryptex role 0 Not a System or data volume
-graft_blockmap_lut_release:1069: reference count dropped to 0, free blockmap_lut
-nx_volume_group_update:7897: os.clone.dmgs1 Volume RomeSecurityGlowG22H730.x86_64SystemCryptex role 0 Not a System or data volume
-graft_blockmap_lut_release:1069: reference count dropped to 0, free blockmap_lut
-apfs_vfsop_unmount:2989: disk3s2 waiting for purgatory cleaner to finish
-nx_volume_group_update:7897: disk3s2 Volume Preboot role 10 Not a System or data volume
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 1
-apfs: total mem allocated: 48445124 (46 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 1)
-unmount(0) /dev
-unmount(0) /
-apfs_log_mount_unmount:2039: disk3s4 unmounting volume com.apple.os.update-74E05D9EE66173C522D76DF0C98A5B74A648965D5E82C6C7FF1AFB3E584375C2, requested by: launchd (pid 1); parent: kernel_task (pid 0)
-gbitmap_update_thread_terminate:5500: disk3s4 called for snapshot, skipping
-nx_volume_group_destitch_firmlinks:7761: disk3s4 Destitch all firmlinks
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312459306
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312439173
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312444718
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312436343
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312436340
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312436264
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312436263
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312377558
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312081129
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312222648
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500311919221
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312222647
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500311919220
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312069500
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500311879701
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500311879702
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-nx_volume_group_destitch_firmlinks:7803: disk3s4 Destitch inode 1152921500312436344
-nx_volume_group_destitch_firmlinks:7821: disk3s4 apfs_get_firmlink_target_vnode_internal failed to find target vnode
-apfs_vfsop_unmount:3318: disk3 nx_num_vols_mounted is 0
-container_unload:1888: vnode_close() invoked in the container unload path
-apfs: total mem allocated: 10384 (0 mb);
-apfs_vfsop_unmount:3331: all done.  going home.  (numMountedAPFSVolumes 0)
-vfs_unmountall(system) end
-done
-CPU halted
-GTrace synchronization point 66
-[AHCI][DISK][00020020] ChangePowerState::4394:inPowerStateCommand: 224 status = 0x0
-[AHCI][DISK][001F0200] ChangePowerState::4394:inPowerStateCommand: 224 status = 0x0
-[AHCI][DISK][001F0210] ChangePowerState::4394:inPowerStateCommand: 224 status = 0x0
-PMRD: PowerOff driver IOBlockStorageDriver (0x1000001f2) took 501 ms
-PMRD: PowerOff driver IOBlockStorageDriver (0x100000284) took 503 ms
-PMRD: PowerOff driver IOBlockStorageDriver (0x1000001f8) took 501 ms
-AppleUSBEHCIPort@fd100000: AppleUSBHostPort::terminateDevice: destroying 0x0627/0001/0000 (QEMU USB Tablet): port is powering off
-AXS8P6:P lASaPt:f osrhmuPtltuignign :d:oswynst
-emWillShutdown!
-X86PlatformPlugin::systemWillShutdown!
-IOPlatformHaltRestartAction -> AppleSMC
-PMRD: PowerOff all drivers took 520 ms
-PMRD: PowerOff total 1134 ms
-
