@@ -1,0 +1,16 @@
+osx_disk.qcow2
+recovery/
+esp/
+
+edk2-ovmf/
+opencore/
+reference.plist
+
+propertree/
+reims/
+
+qemu_debug.log
+tmp/
+
+.zed/
+.code/
