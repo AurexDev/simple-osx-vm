@@ -5,6 +5,8 @@ esp/
 edk2-ovmf/
 opencore/
 reference.plist
+reference.sh
+serial_output.log
 
 propertree/
 reims/
